@@ -1,0 +1,150 @@
+/*
+  Module
+*/
+/*
+* Match Icons
+*/
+[class^="m-i-"], [class*=" m-i-"] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+.m-i-1{
+  background-image: url(../img/mi1.svg);
+}
+.m-i-2{
+  background-image: url(../img/mi2.svg);
+}
+.m-i-3{
+  background-image: url(../img/mi3.svg);
+}
+.m-i-4{
+  background-image: url(../img/mi4.svg);
+}
+.m-i-5{
+  background-image: url(../img/mi5.svg);
+}
+.m-i-6{
+  background-image: url(../img/mi6.svg);
+}
+.m-i-7{
+  background-image: url(../img/mi7.svg);
+}
+.m-i-8{
+  background-image: url(../img/mi8.svg);
+}
+.m-i-9{
+  background-image: url(../img/mi9.svg);
+}
+.m-i-10{
+  background-image: url(../img/mi10.svg);
+}
+.m-i-11{
+  background-image: url(../img/mi11.svg);
+}
+
+/*
+* Predictors Icons
+*/
+[class^="p-i-"], [class*=" p-i-"] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: text-bottom;
+}
+.p-i-1{
+  background-image: url(../img/p1.svg);
+}
+.p-i-2{
+  background-image: url(../img/p2.svg);
+}
+.p-i-3{
+  background-image: url(../img/p3.svg);
+}
+.p-i-4{
+  background-image: url(../img/p4.svg);
+}
+.p-i-5{
+  background-image: url(../img/p5.svg);
+}
+
+/*
+* newsicons
+*/
+[class^="n-i-"], [class*=" n-i-"] {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width:100px;
+  height:100px;
+}
+
+.close {
+  color: #99fffd;
+  font-size: 31px;
+  margin-right: 10px;
+  opacity: .6;
+  text-shadow: 0 1px 0 #000000;
+}
+
+.nav-pager{
+  text-align: right;
+  border-top: 1px solid #4d5963;
+  margin-bottom: 10px;
+  
+  .pagination{
+    margin: 0 2px 0 0;
+    text-align: center;
+    
+    li{
+      &.active{
+        a{
+          background: #4d5963;
+          border-color: #4d5963;
+          box-shadow: 3px 2px 0 2px rgba(0, 0, 0, 0.18);
+          height: 35px;
+          padding: 10px 0 0;
+        }
+      }
+      a{
+        background: #454a4e;
+        color: $link-light-blue;
+        border-radius: 0;
+        border: 1px solid rgba(3, 105, 153, 0);
+        padding: 8px 0 0;
+        width: 35px;
+        height: 32px;
+        line-height: 1;
+        display: inline-block;
+        position: relative;
+        transition: $tease;
+        transform: skew(-5deg);
+        
+        &:active,
+        &:hover,
+        &:focus{
+          background: #424f5a;
+          border-color: #424f5a;
+          transform: skew(-5deg);
+        }
+      }
+      span{
+        background: transparent;
+        color: $link-light-blue;
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+
+
+
+

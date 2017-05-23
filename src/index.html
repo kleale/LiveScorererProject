@@ -1,0 +1,28 @@
+{% set title = "Main Page" %}
+
+<!DOCTYPE html>
+<html>
+{% include "template/head.html" %}
+
+<body class="nightmode">
+  <a style="background:url(/img/bg.jpg) no-repeat scroll 50% 0 #fff" target="_blank" href="" rel="nofollow" class="bgad"></a>
+  {% include "template/breadcrumbs.html" %}
+  {% include "template/header.html" %}
+  <div class="mainwrap container">
+    <section class="container page-content">
+      <div class="clearfix">
+        <div class="center-col">
+          {% include "template/index/filters.html" %}
+          {% include "template/index/list.html" %}
+        </div>
+        <div class="right-col">
+          {% include "template/index/right-col.html" %}
+        </div>
+      </div>
+    </section>
+  </div>
+  {% include "template/footer.html" %}
+  {% include "template/modal.html" %}
+  {% include "template/scripts.html" %}
+</body>
+</html>

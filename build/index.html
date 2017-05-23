@@ -1,0 +1,404 @@
+
+
+<!DOCTYPE html>
+<html>
+
+ 
+<head lang="en"><!-- ADD -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Main Page</title>  
+  <!-- Import fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  
+  <link rel="icon" type="image/png" href="/favicon32.png">
+  
+   <!-- Import bootstrap -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="../css/main.css?51">
+  
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  
+  <!--Import jQuery-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="../assets/js/bootstrap.min.js"></script>  
+</head>
+
+<body class="nightmode">
+  <a style="background:url(/img/bg.jpg) no-repeat scroll 50% 0 #fff" target="_blank" href="" rel="nofollow" class="bgad"></a>
+  <!-- breadcrumb.html -->
+<div class="bread">
+  <div class="container">
+    <div class="projects">
+      <a href="">ggscore.com</a>&nbsp;&nbsp;&times;&nbsp;&nbsp;
+      <a href="">game-tournaments.com</a>&nbsp;&nbsp;&times;&nbsp;&nbsp;
+      <a href="">dotaviewer.com</a>
+    </div>
+    <ol id="breadcumbs" class="breadcrumb">
+      <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+        <a itemprop="url" href="/"><span itemprop="title">LiveScorerer</span></a>
+      </li>
+      <li itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+        <a title="Dota 2" itemprop="url" href="/dota-2"><span itemprop="title">Dota 2</span></a>
+      </li>
+    </ol>
+  </div>
+</div>
+  <!-- header.html -->
+<header>
+  <div class="container">
+    <a href="/" class="logo">
+      <img src="../img/logo.svg" alt="">
+    </a>
+    <div class="opt">
+      <a href="" class="nightmode off"></a>
+      <div class="dropdown">
+        <a class="btn btn-br br1 btn-xs btn-gray" id="ddtime" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span class="utime">12:18 <span class="hidden-xs">MSK</span></span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu timezone" aria-labelledby="ddtime"><li rel="-720"><a href="javascript:;" onclick="set_time(-720)">21:18 (UTC -12:00)</a></li><li rel="-660"><a href="javascript:;" onclick="set_time(-660)">22:18 (UTC -11:00)</a></li><li rel="-600"><a href="javascript:;" onclick="set_time(-600)">23:18 (UTC -10:00)</a></li><li rel="-540"><a href="javascript:;" onclick="set_time(-540)">00:18 (UTC -9:00)</a></li><li rel="-480"><a href="javascript:;" onclick="set_time(-480)">01:18 <b>PST</b> (UTC -8:00)</a></li><li rel="-420"><a href="javascript:;" onclick="set_time(-420)">02:18 <b>PDT</b> (UTC -7:00)</a></li><li rel="-360"><a href="javascript:;" onclick="set_time(-360)">03:18 <b>CST</b> (UTC -6:00)</a></li><li rel="-300"><a href="javascript:;" onclick="set_time(-300)">04:18 <b>EST</b> (UTC -5:00)</a></li><li rel="-240"><a href="javascript:;" onclick="set_time(-240)">05:18 <b>EDT</b> (UTC -4:00)</a></li><li rel="-210"><a href="javascript:;" onclick="set_time(-210)">05:48 (UTC -3:30)</a></li><li rel="-180"><a href="javascript:;" onclick="set_time(-180)">06:18 <b>CLST</b> (UTC -3:00)</a></li><li rel="-120"><a href="javascript:;" onclick="set_time(-120)">07:18 (UTC -2:00)</a></li><li rel="-60"><a href="javascript:;" onclick="set_time(-60)">08:18 (UTC -1:00)</a></li><li rel="0"><a href="javascript:;" onclick="set_time(0)">09:18 (UTC +0:00)</a></li><li rel="60"><a href="javascript:;" onclick="set_time(60)">10:18 <b>CET</b> (UTC +1:00)</a></li><li rel="120"><a href="javascript:;" onclick="set_time(120)">11:18 <b>CEST</b> (UTC +2:00)</a></li><li rel="180" class="active"><a href="javascript:;" onclick="set_time(180)">12:18 <b>MSK</b> (UTC +3:00)</a></li><li rel="210"><a href="javascript:;" onclick="set_time(210)">12:48 (UTC +3:30)</a></li><li rel="240"><a href="javascript:;" onclick="set_time(240)">13:18 (UTC +4:00)</a></li><li rel="270"><a href="javascript:;" onclick="set_time(270)">13:48 (UTC +4:30)</a></li><li rel="300"><a href="javascript:;" onclick="set_time(300)">14:18 (UTC +5:00)</a></li><li rel="330"><a href="javascript:;" onclick="set_time(330)">14:48 (UTC +5:30)</a></li><li rel="360"><a href="javascript:;" onclick="set_time(360)">15:18 (UTC +6:00)</a></li><li rel="420"><a href="javascript:;" onclick="set_time(420)">16:18 (UTC +7:00)</a></li><li rel="480"><a href="javascript:;" onclick="set_time(480)">17:18 <b>SGT</b> (UTC +8:00)</a></li><li rel="540"><a href="javascript:;" onclick="set_time(540)">18:18 (UTC +9:00)</a></li><li rel="570"><a href="javascript:;" onclick="set_time(570)">18:48 (UTC +9:30)</a></li><li rel="600"><a href="javascript:;" onclick="set_time(600)">19:18 (UTC +10:00)</a></li><li rel="660"><a href="javascript:;" onclick="set_time(660)">20:18 (UTC +11:00)</a></li><li rel="720"><a href="javascript:;" onclick="set_time(720)">21:18 (UTC +12:00)</a></li></ul>
+      </div>
+      <div class="dropdown lang">
+        <a class="btn btn-br br2 btn-xs btn-gray" data-toggle="dropdown">
+          <span>Ru</span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="active"><a href="">Ru</a></li>
+          <li><a href="">Eng</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="topmenu">
+      <li class="active">
+        <a href=""><i class="gti-582"></i><span>DOTA 2</span></a>
+      </li>
+      <li>
+        <a href=""><i class="gti-313"></i></a>
+      </li>
+      <li>
+        <a href=""><i class="gti-704"></i></a>
+      </li>
+      <li>
+        <a href=""><i class="gti-800"></i></a>
+      </li>
+      <li>
+        <a href=""><i class="gti-755"></i></a>
+      </li>
+    </ul>
+  </div>
+</header>
+<span class="swipe-area"></span>
+  <div class="mainwrap container">
+    <section class="container page-content">
+      <div class="clearfix">
+        <div class="center-col">
+          <!-- filters.html -->
+<div class="filters">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="btn-group">
+        <a class="btn btn-br br3 dropdown-toggle active" data-toggle="dropdown">
+          <span><i class="gti-582"></i> DOTA 2</span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="active">
+            <a href=""><span><i class="gti-582"></i> DOTA 2</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-313"></i>League of Legends</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-704"></i>CSGO</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-800"></i>Overwatch</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-755"></i>Hearthstone</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="btn-group">
+        <a class="btn btn-br br4 btn-gray dropdown-toggle" data-toggle="dropdown">
+          <span><i class="times">&times;</i> Команда <b>2134</b></span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="active">
+            <a href=""><span><i class="gti-582"></i> DOTA 2</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-313"></i>League of Legends</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-704"></i>CSGO</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-800"></i>Overwatch</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-755"></i>Hearthstone</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="btn-group">
+        <a class="btn btn-br br5 btn-gray dropdown-toggle" data-toggle="dropdown">
+          <span><i class="times">&times;</i> Турнир <b>234</b></span> <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+          <li class="active">
+            <a href=""><span><i class="gti-582"></i> DOTA 2</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-313"></i>League of Legends</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-704"></i>CSGO</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-800"></i>Overwatch</span></a>
+          </li>
+          <li>
+            <a href=""><span><i class="gti-755"></i>Hearthstone</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <a href="" class="btn btn-br btn-ok btn-red"><span>OK</span></a>
+</div>
+<div class="filters_sub">
+  <div class="btn-group">
+    <a class="btn btn-br active">
+      <span>Все</span>
+    </a>
+    <a class="btn btn-br btn-live">
+      <span>Live</span>
+    </a>
+    <a class="btn btn-br">
+      <span>Завершенные</span>
+    </a>
+  </div>
+  <div class="datesorter">
+    <a href="">
+      <i class="gti-angle-left"></i>
+    </a>
+    <span>6 понедельник сентябрь</span>
+    <a href="">
+      <i class="gti-angle-right"></i>
+    </a>
+  </div>
+</div>
+          <!-- list.html -->
+<div class="event_list">
+  
+    <div class="event" id="id1">
+      <div class="game">
+        <a href="" title="game">
+          <i class="gti-582"></i>
+        </a>
+      </div>
+      <div class="date">
+        <a href="" title="NewBee vs CDEC Gaming">
+           <div class="hour_minutes">14:05</div>
+           <div class="day_month">12/05</div>
+        </a> 
+      </div>
+    </div>
+  
+</div>
+        </div>
+        <div class="right-col">
+          <!-- template/index/right-col.html -->
+
+
+<div class="banner" style="height:600px;">
+  
+</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- footer.html -->
+<footer class="footer">
+  <div class="container">
+    <div class="fl">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-3">
+              <a href="" class="flogo">
+                <img src="../img/flogo.svg" alt="">
+              </a>
+            </div>
+            <div class="col-md-5">
+              <div class="contacts">
+                <b>
+                   Контакты
+                  <span>info@cybersportscore.com</span>
+                </b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="f-coppy">
+            <copy>© 2017 &bull; cybersportscore.com</copy><br>
+            <span>ALL RIGHTS RESERVED. GAMEAGEVENTURES LLP</span>            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="f-menu row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3">
+            <b>ТОП КОМАНД<span>и их результаты</span></b>
+            <ul class="f-menu">
+              <li><a href="">Virtus.Pro</a></li>
+              <li><a href="">Kinguin</a></li>
+              <li><a href="">Fnatic</a></li>
+              <li><a href="">EnVyUs</a></li>
+              <li><a href="">dignitas</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <b>ТОП ТУРНИРОВ<span>матчи и статистика</span></b>
+            <ul class="f-menu">
+              <li><a href="">CEVO</a></li>
+              <li><a href="">Alienware</a></li>
+              <li><a href="">ESL Pro League </a></li>
+              <li><a href="">Fragbite </a></li>
+              <li><a href="">FACEIT </a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <b>КИБЕРСПОРТ<span>игры</span></b>
+             <ul class="f-menu-row">
+              <ul class="f-menu">
+                <li><a href="">CS GO</a></li>
+                <li><a href="">League of Legends</a></li>
+                <li><a href="">Starcraft</a></li>
+                <li><a href="">DOTA 2</a></li>
+                <li><a href="">Hearthstone</a></li>
+              </ul>
+              <ul class="f-menu">
+                <li><a href="">Heroes of The Storm</a></li>
+                <li><a href="">Overwatch</a></li>
+                <li><a href="">World of Tanks </a></li>
+                <li><a href="">Call of Duty </a></li>
+                <li><a href="">Smite </a></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <b>О ПРОЕКТЕ</b>
+        <p>Следите за результатами профессиональных турниров CSGO, Dota 2, League of Legends, Starcraft 2, проверяйте прогнозы на ставки, сравнивайте коэффициентов, узнайте больше об игроках, участвующих в матче, а также проверяйте расписание ближайших матчей вашей
+        </p>
+        <div class="f-soc">
+          Мы в соцсетях &nbsp;&nbsp;
+          <a href=""><i class="gti-vk"></i></a>
+          <a href=""><i class="gti-facebook"></i></a>
+          <a href=""><i class="gti-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  <!-- Modal -->
+<div class="modal prwms st-wms fade" id="stavka" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+        <div class="prwms_ico"><b class="gti-dice"></b></div>
+        <h4>
+          Заголовок
+        </h4>
+      </div>
+      <div class="modal-body">
+        Бла
+        <hr>
+        Бла Бла
+      </div>
+      <div class="modal-footer">
+        <i class="gti-info-circle"></i> Текстик
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<!-- Site Sripts -->
+<script src="../inc/main.js"></script>
+
+<!--PAGES select only dev-->
+<style>
+  body{
+    padding-bottom: 60px!important;
+  }
+  .project-menu{
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    border-radius: 5px 0px 0px 0px;
+    /*display: none;*/
+  }
+  .project-menu a{
+    font-size: 10px;
+  }
+</style>
+<div class="project-menu">
+  <div class="btn-group" role="group" id="hpages">
+    <a href="/index.html" class="m1 btn btn-sm btn-warning">Home</a>
+    <a href="/404.html" class="m2 btn btn-sm btn-success">404</a>
+    <a href="/fonts.html" class="m2 btn btn-sm btn-success">Ico</a>
+  </div>
+</div>
+
+<!--PAGES js navi only dev-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script>
+  (function ($) {
+    'use strict';
+    $(document).ready(function () {
+      $(function () {
+          setNavigation();
+      });
+      function setNavigation() {
+          var path = window.location.pathname;
+          path = path.replace(/\/$/, "");
+          path = decodeURIComponent(path);
+
+          $("#hpages a").each(function () {
+              var href = $(this).attr('href');
+              if (path.substring(0, href.length) === href) {
+                  $(this).addClass('active');
+              }
+          });
+      }
+    }); //end ready
+  }(jQuery));
+  </script>
+<!--.STYLE CHANGE dev-->
+<!--.PAGES navi dev-->
+</body>
+</html>
