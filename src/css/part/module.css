@@ -95,8 +95,7 @@
 }
 
 .nav-pager{
-  text-align: right;
-  border-top: 1px solid #4d5963;
+  text-align: left;
   margin-bottom: 10px;
   
   .pagination{
@@ -104,41 +103,34 @@
     text-align: center;
     
     li{
+      font-size: 15px;
       &.active{
         a{
-          background: #4d5963;
-          border-color: #4d5963;
-          box-shadow: 3px 2px 0 2px rgba(0, 0, 0, 0.18);
-          height: 35px;
-          padding: 10px 0 0;
+          background: red;
+          color: #fff;
         }
       }
       a{
-        background: #454a4e;
-        color: $link-light-blue;
+        color: $link;
         border-radius: 0;
-        border: 1px solid rgba(3, 105, 153, 0);
-        padding: 8px 0 0;
+        border: 0;
         width: 35px;
-        height: 32px;
-        line-height: 1;
+        height: 35px;
+        line-height: 23px;
         display: inline-block;
         position: relative;
-        transition: $tease;
-        transform: skew(-5deg);
+        transition: $transition;
         
         &:active,
         &:hover,
         &:focus{
-          background: #424f5a;
-          border-color: #424f5a;
-          transform: skew(-5deg);
+          background: red;
+          border-color: #fff;
+          color: #fff;
         }
       }
-      span{
+      > span{
         background: transparent;
-        color: $link-light-blue;
-        border-radius: 50px;
       }
     }
   }

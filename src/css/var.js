@@ -19,13 +19,13 @@ module.exports = {
     "$text-gray-2": "#6c6c6c",
     "$text-gray-3": "#a0a0a0",
 
-    "$link": "#2faee7",
+    "$link": "#e72f2f",
     "$link-active": "#2faee7",
-  
+    "$link-gray": "#606060",
     "$body-bg": "#fff",
   
-    "$button-blue": "#037db5",
-    "$button-blue-text": "#fff",
+    "$button-red": "#ff0000",
+    "$button-red-text": "#fff",
     "$button-gray": "#444950",
     "$button-gray-text": "#8f8f8f",  
     
@@ -37,6 +37,11 @@ module.exports = {
     "$blue": "#037db5",
     "orange": "#f58563",
     "lightblue": "#4396f7",
+  
+    //dark
+    "darkbg": "#1b292f",
+    "darksub": "#466968",
+    "darkactive": "#31a4a0",
   
     //transitions
     "$transition": "all .1s linear",

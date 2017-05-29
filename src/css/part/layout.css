@@ -28,6 +28,9 @@
     float: right;
     padding: 8px 0;
     color: #eff16c;
+    @media (max-width: $M){
+      display: none;
+    }
   }
 }
 .footer{
@@ -54,11 +57,13 @@
   .fl{
     overflow: hidden;
     .flogo{
-      width: 140px;
+      max-width: 140px;
       display: block;
       opacity: .5;
       float: left;
-      margin-right: 100px;
+      @media (max-width: $XM) {
+        float: right;
+      }
       &:hover{
         opacity: 1;
       }
@@ -75,10 +80,19 @@
     }
   }
   .f-coppy{
-    
+    @media (max-width: $XM) {
+      text-align: center;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      padding: 10px;
+    }
   }
   .f-soc{
     padding: 5px 0 0 0;
+    @media (max-width: $XM) {
+      text-align: center;
+      border-top: 1px solid #ccc;
+    }
     a{
       margin: 0 5px;
       color: #ccc;
@@ -113,6 +127,11 @@
       width: 50%;
     }
   }
+  .fabout{
+    @media (max-width: $XM) {
+      text-align: center;
+    }
+  }
 }
 
 header{
@@ -121,6 +140,9 @@ header{
   position: relative;
   z-index: 3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+  @media (max-width: $M) {
+    padding: 10px 0;
+  }
   .logo{
     float: left;
     display: block;
@@ -128,20 +150,33 @@ header{
     img{
       width: 160px;
     }
+    @media (max-width: $M) {
+      width: 33px;
+      overflow: hidden;
+      padding: 3px 0;
+    }
   }
   .topmenu{
     padding: 0;
     margin: 0 0 0 200px;
+    @media (max-width: $M) {
+      margin: 0 0 0 40px;
+    }
     li{
       display: inline-block;
       position: relative;
       a{
         display: block;
         padding: 5px 10px;
+        @media (max-width: $M){
+          padding: 5px;
+        }
         font-size: 16px;
         color: #999;
         font-weight: 600;
-        &:hover{
+        &:hover,
+        &:active,
+        &:focus{
           text-decoration: none;
           color: red;
           i{
@@ -151,18 +186,28 @@ header{
         }
         i{
           font-size: 21px;
-          text-shadow: 0 0 1px #000;
-          color: #fff;
+          /*text-shadow: 0 0 1px #000;*/
+          color: #b8b8b8;
+          transition: $transition;
+          @media (max-width: $M) {
+            font-size: 16px;
+            margin: 4px 0;
+            display: block;
+          }
         }
         span{
           margin: 0 0 0 5px;
           position: relative;
           top: -3px;
+          @media (max-width: $M) {
+            display: none;
+          }
         }
       }
       &.active{
         color: red;
-        &:before{
+        /*&:before{
+          transition: $transition;
           content: '';
           display: block;
           position: absolute;
@@ -175,12 +220,21 @@ header{
           transform-origin: center;
           transform: perspective(100px) rotateY(16deg);
           transform-style: preserve-3d;
+          @media (max-width: $M) {
+            display: none;
+          }
+        }*/
+        &:hover{
+          /*&:before{
+            transform: perspective(100px) rotateY(-10deg);
+            right: 6px;
+            bottom: 2px;
+            left: -3px;
+          }*/
         }
         a{
           cursor: default;
           color: red;
-          /* transform: rotateX(-4deg) perspective(150px) rotateY(6deg); */
-          /* transform-style: preserve-3d; */
           &:hover{
             cursor: default;
             color: red;
@@ -196,14 +250,40 @@ header{
   .opt{
     float: right;
     padding: 8px 0;
-    .nightmode{
+    @media (max-width: $M){
+      padding: 5px;
+      .btn{
+        padding: 5px 0;
+        /*&:before{
+          display: none;
+        }*/
+      }
+    }
+    .nightmode-btn{
       display: inline-block;
-      margin-left: 3px;
+      vertical-align: middle;
+      margin-right: 5px;
+      font-family: 'gticons';
+      color: #555;
+      &:before{
+        content: '\f186';
+      }
+      &:hover,
+      &:focus{
+        color: red;
+        text-decoration: none;
+      }
+      &.off{
+        &:before{
+          content: '\e919';
+        }
+      }
+      &.active{
+        color: red;
+      }
     }
     .btn{
       .caret{
-        margin: 0px 4px 0px 6px !important;
-        float: right;
       }
     }
     .dropdown{
@@ -219,7 +299,10 @@ header{
 
 .bgad{
   display: block;
-  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   position: absolute;
   width: 100%;
   z-index: 2;
@@ -249,12 +332,20 @@ header{
 .page-content{
   padding: 15px 0;
   .center-col{
-    width: calc( 100% - 290px);
+    width: calc( 100% - 190px);
     float: left;
+    @media (max-width: $XM) {
+      width: 100%;
+      float: none;
+    }
   }
   .right-col{
-    width: 250px;
+    width: 160px;
     float: right;
+    @media (max-width: $XM) {
+      width: 100%;
+      float: none;
+    }
   }
 }
 .filters{
@@ -266,23 +357,26 @@ header{
     > div{
       padding-right: 5px;
       padding-left: 5px;
+      @media (max-width: $M) {
+        margin-bottom: 5px;
+      }
     }
   }
   .btn-ok{
     position: absolute 0px 0 * *;
-    &:before{
-    content: '';
-    display: block;
-    position: absolute;
-    top: -2px;
-    right: 0px;
-    bottom: -3px;
-    left: 0px;
-    border-radius: 3px;
-    transform-origin: center;
-    transform: rotateX(-7deg) perspective(200px) rotateY(-20deg) skewX(8deg);
-    transform-style: preserve-3d;
-    }
+    /*&:before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -2px;
+      right: 0px;
+      bottom: -3px;
+      left: 0px;
+      border-radius: 3px;
+      transform-origin: center;
+      transform: rotateX(-7deg) perspective(200px) rotateY(-20deg) skewX(8deg);
+      transform-style: preserve-3d;
+    }*/
   }
   .btn-group{
     display: block;
@@ -294,7 +388,7 @@ header{
     font-size: 13px;
     i{
       font-size: 18px;
-      line-height: 13px;
+      line-height: 11px;
       margin-right: 5px;
       position: relative;
       top: 3px;
@@ -316,7 +410,8 @@ header{
     }
     .caret{
       float: right;
-      margin: 0px 10px 0 0;
+      position: absolute;
+      right: 10px;
     }
     &:hover{
       i.times{
@@ -330,16 +425,22 @@ header{
 }
 .filters_sub{
   color: #000;
-  padding: 10px 0;
-  .btn-group{
+  padding: 13px 0 10px;
+  overflow: hidden;
+  @media (max-width: $M) {
+    text-align: center;
+  }
+  
+  .btns{
+    display: inline-block;
     a{
       text-transform: uppercase;
       color: #000;
       font-size: 13px;
-      font-weight: 300;
+      font-weight: 400;
       padding: 5px 10px;
       margin-right: 10px;
-      &:before{
+      /*&:before{
         top: 0px;
         right: 0px;
         bottom: 1px;
@@ -348,22 +449,22 @@ header{
         border-radius: 3px;
         transform-origin: center;
         transform: perspective(100px) rotateY(0deg);
-      }
+      }*/
       &:nth-child(1){
         color: #000;
         margin-right: 15px;
-        &:before{
+        /*&:before{
           transform: perspective(100px) rotateY(-27deg);
           left: -2px;
-        }
+        }*/
       }
       &:nth-child(2){
         color: red;
-        &:before{
+        /*&:before{
           transform: perspective(100px) rotateY(27deg);
           left: -2px;
           right: -3px;
-        }
+        }*/
         &:after{
           content: '';
           display: block;
@@ -381,63 +482,118 @@ header{
       &:nth-child(3){
         padding: 3px 10px;
         margin: 2px 0;
-        &:before{
-          
-        }
       }
       &.active{
         color: #fff;
-        &:before{
+        background: red;
+        /*&:before{
           background: red;
-        }
+        }*/
       }
     }
   }
-  .datesorter{
-    padding: 10px 0;
-    float: right;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 300;
-    a{
-      width: 15px;
-      height: 15px;
-      color: red;
-      border-radius: 50%;
-      border: 1px solid red;
-      display: inline-block;
-      text-decoration: none;
-      text-align: center;
-      line-height: 15px;
+}
+.datesorter{
+  padding: 7px 0;
+  float: right;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  @media (max-width: $M) {
+    padding: 15px 0 0 0;
+    float: none;
+    text-align: center;
+  }
+  a{
+    width: 15px;
+    height: 15px;
+    color: red;
+    border-radius: 50%;
+    border: 1px solid red;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 15px;
+    transition: $transition;
+    &:hover{
+      background: red;
+      color: #fff;
     }
-    span{
-      padding: 0 10px;
+    i{
+      line-height: .5;
     }
+  }
+  span{
+    padding: 0 10px;
   }
 }
 
 .event_list{
   .event{
+    position: relative;
     font-size: 11px;
     color: $text-main;
-    font-weight: 300;
+    font-weight: 400;
+    border-radius: 3px;
     
     margin-bottom: 12px;
     width: 100%;
-    background-color: #fff;
-    min-height: 61px;
-    
+    background-color: #f6f6f6;
+    min-height: 60px;
+    border: 1px solid #eaeaea;
+    transition: $transition;
+    &.active{
+      margin-bottom: 0;
+      border-left: 1px solid red;
+      border-right: 1px solid red;
+      border-top: 1px solid red;
+      border-radius: 3px 3px 0 0;
+      &:hover{
+        border-bottom-color: #eaeaea;
+        border-top-color: red;
+        border-left-color: red;
+        border-right-color: red;
+      }
+    }
+    &:hover{
+      border-color: #fda5a5;
+    }
     >div{
       display: inline-block;
       height: 60px;
       position: relative;
+      margin: 0 -1px;
+      @media (max-width: $M){
+        height: 45px;
+      }
       a{
         color: $text-main;
+        &:hover,
+        &:focus,
+        &:active{
+          text-decoration: none;
+        }
       }
     }
     .game{
       text-align: center;
-      width: 45px;
+      width: 35px;
+      @media (max-width: $XM){
+        width: 50px;
+      }
+      a{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        color: red;
+        font-size: 16px;
+      }
+    }
+    .date{
+      text-align: center;
+      width: 35px;
       a{
         position: absolute;
         top: 50%;
@@ -446,25 +602,662 @@ header{
         width: 100%;
       }
     }
-    .date{
+    .tournament{
       text-align: center;
-      width: 45px;
+      width: 75px;
       a{
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         left: 0;
         width: 100%;
-        .hour_minutes{
-        
+      }
+    }
+    .bo{
+      text-align: center;
+      width: 35px;
+      a{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+      }
+    }
+    .teams{
+      width: calc(100% - 216px);
+      position: relative;
+      &:before{
+        content: '';
+        display: block;
+        width: 5px;
+        height: 5px;
+        background: #d1d1d1;
+        border-radius: 50%;
+        top: 27px;
+        left: 0px;
+        position: absolute;
+      }
+      @media (max-width: $M){
+        right: auto;
+        width: 100%;
+        position: relative;
+      }
+      a{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        span{
+          font-size: 12px;
+          line-height: 25px;
+          padding: 2px 0;
+          display: block;
+          &:first-child{
+            border-bottom: 1px solid #d1d1d1;
+          }
+          .flag{
+            width: 16px;
+            margin-right: 2px;
+            vertical-align: text-bottom;
+          }
+          figure{
+            width: 50px;
+            height: 20px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            vertical-align: text-bottom;
+            position: relative;
+            top: 3px;
+            @media (max-width: $XM){
+              width: 50px;
+            }
+            img{
+              max-width: 100%;
+              height: 100%;
+              display: inline-block;
+              vertical-align: text-bottom;
+            }
+          }
+          em{
+            font-style: normal;
+            vertical-align: top;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 80px;
+            display: inline-block;
+            text-overflow: ellipsis;
+          }
         }
-        .day_month{
+      }
+    }
+    .scores{
+      text-align: right;
+      display: block;
+      position: absolute 0 22% * *;
+      height: 61px;
+      width: 25%;
+      @media (max-width: $XM){
+        right: 22%;
+      }
+      @media (max-width: $M){
+        right: auto;
+        width: 100%;
+        position: relative;
+        margin-top: -56px;
+        border-top: 1px solid #ccc;
+      }
+      >div{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 100%;
+        div > span{
+          position: relative;
+          width: 14px;
+          display: inline-block;
+          text-align: center;
+          margin: 0 2%;
+          &.radiant,
+          &.dire{
+            margin-right: 2%;
+            font-weight: 700;
+          }
+          &.main-score{
+            margin-right: 3%;
+            font-weight: 700;
+          }
+        }
+      }
+      .radiant{
+        color: $green;
+      }
+      .dire{
+        color: $red;
+      }
+      .team-home,.team-away{
+        span{
+          &:hover{
+            cursor: help;
+          }
+        }
+      }
+      .team-home{
+        padding: 7px 0 8px 0;
+        span{
+          &:after{
+            font-family: 'gticons' !important;
+            position: absolute;
+            bottom: -15px;
+            text-align: center;
+            left: 0;
+            right: 0;
+            background: #f6f6f6;
+            font-size: 10px;
+            color: #888;
+          }
+          &.kills{
+            &:after{
+              content: '\e918';
+            }
+          }
+          &.net{
+            &:after{
+              content: '\f0e7';
+            }
+          }
+          &.towers{
+            &:after{
+              content: '\f286';
+            }
+          }
+          &.star{
+            &:after{
+              content: '\f006';
+            }
+          }
+        }
+      }
+      .team-away{
+        padding: 8px 0 7px 0;
+      }
+    }
+    .actions{
+      width: 22%;
+      position: absolute 0 0 0 *;
+      
+      @media (max-width: $XM){
+        width: 14%;
+      }
+      @media (max-width: $XM){
+        width: calc(100% - 186px);
+      }
+      .btns{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        padding: 0 10px;
+        text-align: right;
+        a{
+          display: inline-block;
+          text-align: center;
+          background: #f6f6f6;
+          margin: 5px 2px;
+          &:hover{
+            color: red;
+          }
+          i{
+            font-size: 14px;
+            line-height: 11px;
+            vertical-align: middle;
+            margin: 0 2px;
+          }
+          &.map{
+            
+          }
+          &.bookmark{
+            
+          }
+          &.tv{
+            
+          }
+          &.open-more-info{
+            @media (max-width: $SSM){
+              display: none;
+            }
+          }
+          &.btn{
+            background: #ececec;
+            text-transform: none;
+            &:hover{
+              background: red;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    
+    &.event-live{
+      .teams{
+        &:before{
+          content: '';
+          display: block;
+          width: 8px;
+          height: 8px;
+          background: red;
+          border-radius: 50%;
+          top: 50%;
+          margin-top: -4px;
+          left: 0;
+          position: absolute;
+          box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.64);
+          
+          @media (max-width: $M){
+            left: 26px;
+            margin-left: -4px;
+          }
+        }
+        a span{
+          &:first-child{
+            border-bottom: 1px solid red;
+          }
+        }
+      }
+      .actions .btns a.btn{
+        border-color: red;
+      }
+    }
+    .eventbets{
+      display: block;
+      height: auto;
+      margin: 0;
+      background: linear-gradient(to bottom, #e8e8e8 0%,#f9f2ed 100%);
+    }
+  } /*.event*/
+} /*.event_list*/
 
+.eventbets{
+  font-size: 11px;
+  color: #111;
+  font-weight: 400;
+  background: #f9f2ed;
+  table{
+    width: 100%;
+    tr{
+      &:betlink{
+        cursor: pointer;
+      }
+      td{
+        padding: 2px;
+        border-top: 1px solid #fff;
+        &:nth-child(1){
+           width: 40%;
+          text-align: right;
+        }
+        &:nth-child(2){
+          width: 20%;
+          text-align: center;
+          img{
+            height: 14px;
+          }
+        }
+        &:nth-child(3){
+          width: 40%;
         }
       }
     }
   }
 }
+.eventinfo{
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  border-bottom: 1px solid red;
+  display: none;
+  margin-bottom: 12px;
+  &.active{
+    display: block;
+    border-radius: 0 0 3px 3px;
+  }
+}
+
+.centered{
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  i{
+    font-size: 15px;
+    margin-right: 10px;
+    vertical-align: baseline;
+  }
+}
+
+.nav-pager .datesorter{
+  padding-top: 9px;
+}
+
+.eventgraf{
+  overflow: hidden;
+  .dotanet{
+    float: left;
+    width: 65%;
+    min-height: 240px;
+    @media (max-width: $M){
+      float: none;
+      width: 100%;
+    }
+    .nav{
+      background: #eaeaea;
+      li{
+        a{
+          padding: 5px 10px;
+          font-size: 11px;
+          text-transform: uppercase;
+          border-radius: 0;
+        }
+        &.active{
+          a,
+          a:hover,
+          a:focus{
+            background: #f5f5f5;
+          }
+        }
+      }
+    }
+    .tab-content{
+      .tab-pane{
+        .chart{
+          height: 240px;
+          position: relative;
+        }
+      }
+    }
+  }
+  .dotamapt{
+    float: right;
+    width: 35%;
+    padding: 10px;
+    background: #eaeaea;
+    @media (max-width: $M){
+      display: none;
+    }
+    a{
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.block{
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #eee;
+  h3{
+    margin: -16px 0 10px 0;
+    color: red;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    span{
+      padding: 0 5px;
+      display: inline-block;
+      background: #fff;
+      i{
+        margin-right: 5px;
+      }
+    }
+  }
+}
+.streams{
+  ul{
+    margin: 0;
+    padding: 0 13px 0 0;
+    list-style: none;
+    overflow-x: auto;
+    overflow-x: hidden;
+    position: relative;
+    max-height: 148px;
+    li{
+      display: block;
+      position: relative;
+      margin-bottom: 4px;
+      a{
+        display: block;
+        font-size: 11px;
+        color: #000;
+        padding: 2px;
+        overflow: hidden;
+        line-height: 14px;
+        &:hover,
+        &:focus{
+          text-decoration: none;
+          background-color: #f5eeee;
+        }
+        img{
+          width: 30px;
+          float: left;
+          margin-right: 10px;
+        }
+        em{
+          display: block;
+          margin-top: 2px;
+          font-style: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+
+.players{
+  table{
+    margin: 0;
+    tr:last-child{
+      border: 0;
+    }
+  }
+  .summary{
+    font-size: 13px;
+    font-weight: 400;
+    span{
+      font-weight: 700;
+      width: 30px;
+      display: inline-block;
+    }
+    .win{
+      color: #769534;
+    }
+    .lose{
+      color: #ed1c24;
+    }
+    figure{
+      margin: 0;
+      img{
+        width: 20px;
+      }
+    }
+    td{
+      padding: 0px 2px 13px;
+      em{
+        font-style: normal;
+      }
+      &:nth-child(1){
+        width: 40%;
+        text-align: right;
+        figure{
+          float: right;
+          padding: 0 0 0 10px;
+        }
+      }
+      &:nth-child(2){
+        text-align: center;
+      }
+      &:nth-child(3){
+        width: 40%;
+        figure{
+          float: left;
+          padding: 0 10px 0 0;
+        }
+      }
+    }
+  }
+  .player{
+    font-size: 12px;
+    .flag{
+      width: 18px;
+    }
+    td{
+      padding: 2px;
+      vertical-align: middle;
+      &.inf{
+        font-size: 10px;
+        width: 20%;
+        span{
+          cursor: help;
+        }
+        &.inf1{
+          text-align: left;
+        }
+      }
+      em{
+        width: calc(100% - 30px);
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 1px 2px 0;
+        margin-bottom: -4px;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 600;
+      }
+      &:nth-child(2){
+        width: 20%;
+        text-align: right;
+        .flag{
+          float: right;
+          margin: 0px 1px 0 10px;
+        }
+      }
+      &:nth-child(3){
+        text-align: center;
+        color: #9a9a9a;
+        font-size: 11px;
+      }
+      &:nth-child(4){
+        width: 20%;
+        .flag{
+          float: left;
+          margin: 0px 10px 0 1px;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+* NIGHT
+*/
+.nightmode{
+  background-color: #1b292e;
+  .bread{
+    background: #31a4a0;
+    color: #000;
+    a{
+      color: #1a282d;
+    }
+  }
+  header{
+    background: #1b292f;
+    .topmenu li{
+      a{
+        color: #466968;
+        &:hover,
+        &:focus{
+          color: #466968;
+        }
+        i{
+          color: #466968;
+        }
+      }
+      &.active a{
+        color: #31a4a0;
+         i{
+          color: #31a4a0;
+        }
+      }
+    }
+    .opt .nightmode-btn{
+      color: #466968;
+      &.active,
+      &:hover,
+      &:focus{
+        color: #31a4a0;
+      }
+    }
+  }
+  .btn-br{
+    border: 1px solid #31a4a0;
+    color: #31a4a0;
+    &:hover{
+      color: #fff!important;
+      background: #31a4a0;
+      border-color: #31a4a0;
+      b{
+        color: #c7fbf8;
+      }
+    }
+    &.active {
+      color: #fff;
+      border-color: #31a4a0;
+      background: #31a4a0;
+    }
+    &.btn-gray{
+      color: #31a4a0;
+    }
+    &.btn-red {
+      color: #fff;
+      background: #31a4a0;
+      border-color: #31a4a0;
+      &:hover{
+        background: #31a4a0;
+        border-color: #31a4a0;
+      }
+    }
+  }
+  .filters .btn b {
+    color: #68d8d2;
+  }
+  .mainwrap{
+    background: #1a282d;
+  }
+  .filters_sub {
+    .btns a{
+      color: #68d8d2;
+      &.active {
+        color: #fff;
+        background: #31a4a0;
+      }
+    }
+  }
+  
+} /*.nightmode*/
+
+
+
+
+
 
 
 

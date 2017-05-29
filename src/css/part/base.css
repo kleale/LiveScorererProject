@@ -10,11 +10,11 @@ body{
   background: url(../img/bgtile.jpg) 0 0 repeat;
 }
 a{
-  color: $link-light-blue;
+  color: $link;
   &:active,
   &:focus,
   &:hover{
-    color: $link-blue-active;
+    color: $link-active;
     text-decoration: underline;
   } 
 }
@@ -22,3 +22,30 @@ a{
 hr{
   border-top: 1px solid #454a4e;
 }
+
+h1,h2,h3,h4,h5,h6,{
+  
+}
+
+h1{
+  font-size: 24px;
+  color: red;
+}
+h2{
+  font-size: 21px;
+  color: red;
+}
+h3{
+  font-size: 18px;
+  color: red;
+}
+h4{
+  
+}
+h5{
+  
+}
+h6{
+  
+}
+

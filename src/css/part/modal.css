@@ -70,7 +70,7 @@
   .modal-footer{
     text-align: center;
     .label{
-      color: $link-light-blue;
+      color: $link;
       margin: 0 5px;
     }
   }
