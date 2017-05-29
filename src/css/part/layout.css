@@ -1170,88 +1170,91 @@ header{
 * NIGHT
 */
 .nightmode{
-  background-color: #1b292e;
+  background-color: $darkbg;
   .bread{
-    background: #31a4a0;
-    color: #000;
+    background: $darkactive;
+    color: $darkbg;
     a{
-      color: #1a282d;
+      color: $darkbg;
     }
   }
   header{
-    background: #1b292f;
+    background: $darkbg;
     .topmenu li{
       a{
-        color: #466968;
+        color: $darksub;
         &:hover,
         &:focus{
-          color: #466968;
+          color: $darksub;
         }
         i{
-          color: #466968;
+          color: $darksub;
         }
       }
       &.active a{
-        color: #31a4a0;
+        color: $darkactive;
          i{
-          color: #31a4a0;
+          color: $darkactive;
         }
       }
     }
     .opt .nightmode-btn{
-      color: #466968;
+      color: $darksub;
       &.active,
       &:hover,
       &:focus{
-        color: #31a4a0;
+        color: $darkactive;
       }
     }
   }
   .btn-br{
-    border: 1px solid #31a4a0;
-    color: #31a4a0;
+    border-color: $darkbg;
+    color: $darkactive;
     &:hover{
-      color: #fff!important;
-      background: #31a4a0;
-      border-color: #31a4a0;
+      color: $darklight!important;
+      background: $darkactive;
+      border-color: $darkactive;
       b{
-        color: #c7fbf8;
+        color: $darklight;
       }
     }
     &.active {
-      color: #fff;
-      border-color: #31a4a0;
-      background: #31a4a0;
+      color: $darklight;
+      border-color: $darkactive;
+      background: $darkactive;
     }
     &.btn-gray{
-      color: #31a4a0;
+      color: $darkactive;
     }
     &.btn-red {
-      color: #fff;
-      background: #31a4a0;
-      border-color: #31a4a0;
+      color: $darklight;
+      background: $darkactive;
+      border-color: $darkactive;
       &:hover{
-        background: #31a4a0;
-        border-color: #31a4a0;
+        background: $darkactive;
+        border-color: $darkactive;
       }
     }
   }
   .filters .btn b {
-    color: #68d8d2;
+    color: $darklight;
   }
   .mainwrap{
-    background: #1a282d;
+    background: $darkbg;
   }
   .filters_sub {
     .btns a{
-      color: #68d8d2;
+      color: $darklight;
       &.active {
-        color: #fff;
-        background: #31a4a0;
+        color: $darklight;
+        background: $darkactive;
       }
     }
   }
-  
+  .datesorter a{
+    color: $darkactive;
+    border-color: $darkactive;
+  }
 } /*.nightmode*/
 
 

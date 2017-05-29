@@ -35,13 +35,14 @@ module.exports = {
     "$green": "#82ac4e",
     "$red": "#ea6465",
     "$blue": "#037db5",
-    "orange": "#f58563",
-    "lightblue": "#4396f7",
+    "$orange": "#f58563",
+    "$lightblue": "#4396f7",
   
     //dark
-    "darkbg": "#1b292f",
-    "darksub": "#466968",
-    "darkactive": "#31a4a0",
+    "$darkbg": "#1b292f",
+    "$darksub": "#466968",
+    "$darkactive": "#31a4a0",
+    "$darklight": "#68d8d2",
   
     //transitions
     "$transition": "all .1s linear",
