@@ -120,6 +120,7 @@
         display: inline-block;
         position: relative;
         transition: $transition;
+        background: transparent;
         
         &:active,
         &:hover,

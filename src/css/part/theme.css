@@ -237,7 +237,6 @@
 .open>.dropdown-toggle.btn{
   background-color: $bg-dropdown;
   color: $link-gray;
-  border-radius: 0;
   position: relative;
 }
 body .open>.dropdown-toggle.btn-default:focus{
@@ -663,48 +662,6 @@ Tabs
 
 
 
-/*
-svg btn
-*/
-.button{
-  position: relative;
-  display: block;
-}
-.morph-shape {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-.button--line:nth-child(2) .morph-shape svg {
-    fill: #938edc;
-}
-.button--line .morph-shape svg {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 4px;
-    stroke-linecap: round;
-}
-.button__text {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    z-index: 100;
-    font-size: 1.5em;
-    color: #fff;
-    font-weight: bold;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-
-
 
 
 /*
@@ -870,3 +827,94 @@ transform btn border
   }
 }
 */
+
+
+/*
+svg btn
+*/
+.button{
+  position: relative;
+  display: block;
+  &.btn-fill{
+    background: transparent;
+    border-color: transparent;
+  }
+  &.btn-line{
+    background: transparent;
+    border-color: transparent;
+  }
+}
+.btn .morph-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.btn-line .morph-shape svg {
+    fill: none;
+    stroke: $darkactive;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+.btn.btn-br .btn_txt {
+    display: block;
+    position: relative;
+    z-index: 100;
+    padding: 2px 0;
+    color: #fff;
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-fill .morph-shape svg {
+  fill: red;
+}
+
+.open>.dropdown-toggle.btn.btn-br.button,
+.open>.dropdown-toggle.btn.btn-br.button:hover,
+.dropdown-toggle.btn.btn-br.button:hover{
+  background: transparent;
+  border-color: transparent;
+  svg {
+    fill: #d41515;
+  }
+  span.btn_txt{
+    color: #fff;
+  }
+}
+.filters .br3{
+  min-height: 39px;
+  margin-top: -1px;
+  margin-left: -4px!important;
+}
+.button.btn-ok{
+  height: 39px;
+}
+
+/*
+* NIGHT
+*/
+.nightmode{
+  .button{
+    &.btn-fill{
+      background: transparent;
+      border-color: transparent;
+    }
+  }
+  .btn-fill .morph-shape svg {
+      fill: $darkactive;
+  }
+  .open>.dropdown-toggle.btn.btn-br.button,
+  .open>.dropdown-toggle.btn.btn-br.button:hover,
+  .dropdown-toggle.btn.btn-br.button:hover{
+    svg {
+      fill: #29928e;
+    }
+  }
+  
+}

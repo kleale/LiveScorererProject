@@ -895,7 +895,7 @@ h6{
 .footer .f-menu{
   list-style: none;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   padding: 0;
 }
 .footer .f-menu li{
@@ -1155,12 +1155,12 @@ header .opt .dropdown .dropdown-menu{
   position: relative;
 }
 .filters .row{
-  margin-right: -5px;
-  margin-left: -5px;
+  margin-right: -2px;
+  margin-left: -2px;
 }
 .filters .row > div{
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 @media (max-width: 768px) {
   .filters .row > div {
@@ -1187,6 +1187,9 @@ header .opt .dropdown .dropdown-menu{
 .filters .btn-group{
   display: block;
 }
+.filters .btn-group .dropdown-menu i{
+  margin-right: 10px;
+}
 .filters .btn{
   display: block;
   float: none;
@@ -1207,8 +1210,7 @@ header .opt .dropdown .dropdown-menu{
   font-weight: 100;
   float: left;
   height: 17px;
-  margin-right: 8px;
-  margin-left: -2px;
+  margin: -1px 8px 0 -2px;
   opacity: .2;
 }
 .filters .btn b{
@@ -1219,6 +1221,8 @@ header .opt .dropdown .dropdown-menu{
   float: right;
   position: absolute;
   right: 10px;
+  top: 23%;
+  z-index: 2;
 }
 .filters .btn:hover i.times{
   opacity: 1;
@@ -1300,8 +1304,7 @@ header .opt .dropdown .dropdown-menu{
 .datesorter{
   padding: 7px 0;
   float: right;
-  text-transform: uppercase;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 400;
 }
 @media (max-width: 768px) {
@@ -1331,7 +1334,7 @@ header .opt .dropdown .dropdown-menu{
   line-height: .5;
 }
 .datesorter span{
-  padding: 0 10px;
+  padding: 0 5px;
 }
 .event_list{ /*.event*/
 }
@@ -1448,6 +1451,7 @@ header .opt .dropdown .dropdown-menu{
   top: 27px;
   left: 0px;
   position: absolute;
+  z-index: 3;
 }
 @media (max-width: 768px){
   .event_list .event .teams {
@@ -1665,7 +1669,7 @@ header .opt .dropdown .dropdown-menu{
   margin-top: -4px;
   left: 0;
   position: absolute;
-  box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.64);
+  box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.4);
 }
 @media (max-width: 768px){
   .event_list .event.event-live .teams:before {
@@ -1684,6 +1688,7 @@ header .opt .dropdown .dropdown-menu{
   height: auto;
   margin: 0;
   background: linear-gradient(to bottom, #e8e8e8 0%,#f9f2ed 100%);
+  margin-top: -4px;
 }
 /*.event_list*/
 .eventbets{
@@ -1722,6 +1727,8 @@ header .opt .dropdown .dropdown-menu{
   border-bottom: 1px solid red;
   display: none;
   margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
 }
 .eventinfo.active{
   display: block;
@@ -1743,20 +1750,18 @@ header .opt .dropdown .dropdown-menu{
 }
 .eventgraf{
   overflow: hidden;
+  background: #eaeaea;
 }
 .eventgraf .dotanet{
   float: left;
   width: 65%;
-  min-height: 240px;
+  min-height: 235px;
 }
 @media (max-width: 768px){
   .eventgraf .dotanet {
     float: none;
     width: 100%;
   }
-}
-.eventgraf .dotanet .nav{
-  background: #eaeaea;
 }
 .eventgraf .dotanet .nav li a{
   padding: 5px 10px;
@@ -1955,15 +1960,18 @@ header .opt .dropdown .dropdown-menu{
 * NIGHT
 */
 .nightmode{
-  background-color: #1b292e;
-  
+  color: #a8bdbd;
+  background-color: #1b292f;
+}
+.nightmode h2{
+  color: #31a4a0;
 }
 .nightmode .bread{
   background: #31a4a0;
-  color: #000;
+  color: #1b292f;
 }
 .nightmode .bread a{
-  color: #1a282d;
+  color: #1b292f;
 }
 .nightmode header{
   background: #1b292f;
@@ -1983,6 +1991,7 @@ header .opt .dropdown .dropdown-menu{
 }
 .nightmode header .topmenu li.active a i{
   color: #31a4a0;
+  text-shadow: 0 1px 7px #31a4a0;
 }
 .nightmode header .opt .nightmode-btn{
   color: #466968;
@@ -1991,9 +2000,10 @@ header .opt .dropdown .dropdown-menu{
       .nightmode header .opt .nightmode-btn:hover,
       .nightmode header .opt .nightmode-btn:focus{
   color: #31a4a0;
+  text-shadow: 0 1px 7px #31a4a0;
 }
 .nightmode .btn-br{
-  border: 1px solid #31a4a0;
+  border-color: #31a4a0;
   color: #31a4a0;
 }
 .nightmode .btn-br:hover{
@@ -2002,7 +2012,7 @@ header .opt .dropdown .dropdown-menu{
   border-color: #31a4a0;
 }
 .nightmode .btn-br:hover b{
-  color: #c7fbf8;
+  color: #68d8d2;
 }
 .nightmode .btn-br.active {
   color: #fff;
@@ -2025,7 +2035,7 @@ header .opt .dropdown .dropdown-menu{
   color: #68d8d2;
 }
 .nightmode .mainwrap{
-  background: #1a282d;
+  background: #1b292f;
 }
 .nightmode .filters_sub .btns a{
   color: #68d8d2;
@@ -2033,6 +2043,177 @@ header .opt .dropdown .dropdown-menu{
 .nightmode .filters_sub .btns a.active {
   color: #fff;
   background: #31a4a0;
+}
+.nightmode .datesorter{
+  color: #31a4a0;
+}
+.nightmode .datesorter a{
+  color: #31a4a0;
+  border-color: #31a4a0;
+}
+.nightmode .footer{
+  background: #192427;
+  color: rgba(153, 153, 153, 0.63);
+}
+.nightmode .footer .contacts b{
+  color: #31a4a0;
+}
+.nightmode .footer .contacts b span{
+  color: rgba(153, 153, 153, 0.63);
+}
+.nightmode .footer .f-menu a{
+  color: rgba(153, 153, 153, 0.63);
+}
+.nightmode .footer .f-menu a :hover{
+  color: #31a4a0;
+}
+.nightmode .footer .f-menu b{
+  color: #31a4a0;
+}
+.nightmode .footer .f-menu b span{
+  color: rgba(153, 153, 153, 0.63);
+}
+.nightmode .nav-pager .pagination li a,
+    .nightmode .nav-pager .pagination li span{
+  color: #31a4a0;
+}
+.nightmode .nav-pager .pagination li.active a{
+  background: #31a4a0;
+}
+.nightmode .nav-pager .pagination li a:hover{
+  background: #31a4a0;
+}
+.nightmode .banner{
+  background: #434e52;
+}
+.nightmode .event_list .event{
+  background-color: #3a464a;
+  border-color: #466968;
+  color: #d8d8d8;
+}
+.nightmode .event_list .event.active{
+  border-left-color: #31a4a0;
+  border-right-color: #31a4a0;
+  border-top-color: #31a4a0;
+}
+.nightmode .event_list .event.active:hover{
+  border-bottom-color: #466968;
+}
+.nightmode .event_list .event:hover{
+  background: #3d5252;
+}
+.nightmode .event_list .event:hover .scores .team-home span:after, 
+        .nightmode .event_list .event:hover .scores .team-away span:after, 
+        .nightmode .event_list .event:hover .actions .btns a{
+  background: #3d5252;
+}
+.nightmode .event_list .event >div a{
+  color: #d8d8d8;
+}
+.nightmode .event_list .event .game a{
+  color: #31a4a0;
+  text-shadow: 0 1px 11px #31a4a0;
+}
+.nightmode .event_list .event.event-live .teams a span:first-child{
+  border-bottom-color: #31a4a0;
+}
+.nightmode .event_list .event.event-live .teams:before{
+  box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.2);
+}
+.nightmode .event_list .event .teams a span:first-child{
+  border-bottom-color: #466968;
+}
+.nightmode .event_list .event .scores .team-home span,
+      .nightmode .event_list .event .scores .team-away span{
+  color: #cebc50;
+}
+.nightmode .event_list .event .scores .team-home span:after,.nightmode .event_list .event .scores .team-away span:after{
+  background: #3a464a;
+  color: #31a4a0;
+}
+.nightmode .event_list .event .actions .btns a{
+  background: #3a464a;
+  color: #31a4a0;
+}
+.nightmode .event_list .event .actions .btns a.btn{
+  color: #fff;
+  border-color: #31a4a0;
+  background: #466968;
+}
+.nightmode .event_list .eventbets{
+  background: #3a464a;
+  color: #a8bdbd;
+}
+.nightmode .event_list .eventbets table tr td {
+  border-color: #466968;
+}
+.nightmode .eventinfo{
+  border-left-color: #31a4a0;
+  border-right-color: #31a4a0;
+  border-bottom-color: #31a4a0;
+  background: #2c3538;
+}
+.nightmode .eventinfo.active{
+  margin-top: -1px;
+}
+.nightmode .eventinfo .eventgraf{
+  background: #3a464a;
+  border-top: 1px solid #466968;
+}
+.nightmode .eventinfo .eventgraf .dotanet .nav-tabs{
+  border-bottom-color: #31a4a0;
+}
+.nightmode .eventinfo .eventgraf .dotanet .nav li a{
+  color: #31a4a0;
+}
+.nightmode .eventinfo .eventgraf .dotanet .nav li.active a,
+        .nightmode .eventinfo .eventgraf .dotanet .nav li.active a:hover,
+        .nightmode .eventinfo .eventgraf .dotanet .nav li.active a:focus{
+  background: #2c3538;
+  color: #31a4a0;
+  border-color: #31a4a0;
+  border-bottom-color: transparent;
+}
+.nightmode .eventinfo .eventgraf .dotanet .nav li:first-child a{
+  border-left: 0;
+}
+.nightmode .eventinfo .eventgraf .dotanet .chart{
+  
+}
+.nightmode .eventinfo .eventgraf .dotamapt{
+  background: #3a464a;
+  border-left: 1px solid #466968;
+  border-bottom: 1px solid #466968;
+}
+.nightmode .eventinfo .block{
+  border-color: #466968;
+}
+.nightmode .eventinfo .block h3 span{
+  background: #2c3538;
+  color: #31a4a0;
+}
+.nightmode .eventinfo .streams ul li a{
+  color: #a8bdbd;
+}
+.nightmode .eventinfo .streams ul li a:hover{
+  background: #466968;
+  color: #fff;
+}
+.nightmode .eventinfo .players .player td:nth-child(3){
+  color: #31a4a0;
+}
+.nightmode .eventinfo .players .table>tbody>tr {
+  border-bottom-color: #466968;
+}
+.nightmode .double-bounce1, .nightmode .double-bounce2{
+  background-color: #31a4a0;
+}
+.nightmode .dropdown-menu{
+  background-color: #31a4a0;
+}
+.nightmode .open>.dropdown-toggle.btn.btn-br{
+  background-color: #31a4a0;
+  border-color: #31a4a0;
 }
 /*.nightmode*/
 /*
@@ -2152,6 +2333,7 @@ header .opt .dropdown .dropdown-menu{
   display: inline-block;
   position: relative;
   transition: all .1s linear;
+  background: transparent;
 }
 .nav-pager .pagination li a:active,
         .nav-pager .pagination li a:hover,
@@ -2467,7 +2649,6 @@ header .opt .dropdown .dropdown-menu{
 .open>.dropdown-toggle.btn{
   background-color: #305c7b;
   color: #606060;
-  border-radius: 0;
   position: relative;
 }
 body .open>.dropdown-toggle.btn-default:focus{
@@ -2846,44 +3027,6 @@ Tabs
   padding-left: 5px;
 }
 /*
-svg btn
-*/
-.button{
-  position: relative;
-  display: block;
-}
-.morph-shape {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-.button--line:nth-child(2) .morph-shape svg {
-    fill: #938edc;
-}
-.button--line .morph-shape svg {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 4px;
-    stroke-linecap: round;
-}
-.button__text {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    position: relative;
-    z-index: 100;
-    font-size: 1.5em;
-    color: #fff;
-    font-weight: 700;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-/*
 transform btn border
 */
 /*
@@ -3046,6 +3189,83 @@ transform btn border
   }
 }
 */
+/*
+svg btn
+*/
+.button{
+  position: relative;
+  display: block;
+}
+.button.btn-fill{
+  background: transparent;
+  border-color: transparent;
+}
+.button.btn-line{
+  background: transparent;
+  border-color: transparent;
+}
+.btn .morph-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.btn-line .morph-shape svg {
+    fill: none;
+    stroke: #31a4a0;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+.btn.btn-br .btn_txt {
+    display: block;
+    position: relative;
+    z-index: 100;
+    padding: 2px 0;
+    color: #fff;
+    font-weight: 700;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.btn-fill .morph-shape svg {
+  fill: red;
+}
+.open>.dropdown-toggle.btn.btn-br.button,
+.open>.dropdown-toggle.btn.btn-br.button:hover,
+.dropdown-toggle.btn.btn-br.button:hover{
+  background: transparent;
+  border-color: transparent;
+}
+.open>.dropdown-toggle.btn.btn-br.button svg, .open>.dropdown-toggle.btn.btn-br.button:hover svg, .dropdown-toggle.btn.btn-br.button:hover svg {
+  fill: #d41515;
+}
+.open>.dropdown-toggle.btn.btn-br.button span.btn_txt,.open>.dropdown-toggle.btn.btn-br.button:hover span.btn_txt,.dropdown-toggle.btn.btn-br.button:hover span.btn_txt{
+  color: #fff;
+}
+.filters .br3{
+  min-height: 39px;
+  margin-top: -1px;
+  margin-left: -4px!important;
+}
+.button.btn-ok{
+  height: 39px;
+}
+/*
+* NIGHT
+*/
+.nightmode .button.btn-fill{
+  background: transparent;
+  border-color: transparent;
+}
+.nightmode .btn-fill .morph-shape svg {
+  fill: #31a4a0;
+}
+.nightmode .open>.dropdown-toggle.btn.btn-br.button svg, .nightmode .open>.dropdown-toggle.btn.btn-br.button:hover svg, .nightmode .dropdown-toggle.btn.btn-br.button:hover svg {
+  fill: #29928e;
+}
 @font-face {
   font-family: 'gticons';
   src:  url('../fonts/gticons.eot?dxm628');

@@ -5,7 +5,7 @@
 {% include "template/head.html" %}
 
 <body class="nightmode">
-  <a style="background:url(/img/bgdark.jpg) no-repeat scroll 50% 0 #f4f4f4" target="_blank" href="" rel="nofollow" class="bgad"></a>
+  <a style="background:url(/img/bgdark.jpg) no-repeat scroll 50% 0 #1b292f" target="_blank" href="" rel="nofollow" class="bgad"></a>
   {% include "template/breadcrumbs.html" %}
   {% include "template/header.html" %}
   <div class="mainwrap container">
@@ -22,16 +22,6 @@
         </div>
         <div class="right-col">
           {% include "template/index/right-col.html" %}
-          
-          <a class="button button--line button--effect-1">
-              <span class="morph-shape" data-morph-active="M286,113c0,0-68.8,9-136,9c-78.2,0-137-9-137-9S3,97.198,3,62.5C3,33.999,13,12,13,12S72,2,150,2c85,0,136,10,136,10s11,17.598,11,52C297,96.398,286,113,286,113z">
-                  <svg width="100%" height="100%" viewBox="0 0 300 125" preserveAspectRatio="none">
-                      <path d="M286.5,113c0,0-104,0-136.5,0c-35.75,0-136.5,0-136.5,0s0-39.417,0-52.5c0-12.167,0-48.5,0-48.5s101.833,0,136.5,0c33.583,0,136.5,0,136.5,0s0,35.917,0,48.5C286.5,73.167,286.5,113,286.5,113z"/>
-                  </svg>
-              </span>
-              <span class="button__text">Press me</span>
-          </a>
-          
         </div>
       </div>
     </section>
@@ -48,7 +38,219 @@
     'use strict';
     $(document).ready(function () {
       $('.logoimg').attr( 'src', '../img/logodark.svg');
-      $('.nightmode-btn').addClass('');
+      $('.flogo img').attr( 'src', '../img/logodark.svg');
+      $('.nightmode-btn').addClass('active');
+      $('.nightmode-btn.off').removeClass('active');
     });
   }(jQuery));
+  
+  
+//DARK Highcharts theme
+   Highcharts.theme = {
+   colors: ["#47c54a", "#df4b4f", "#16b4d1", "#2c708e", "#d300aa", "#c19400", "#a2110c",
+      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: {
+         linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+         stops: [
+            [0, '#2c3538'],
+            [1, '#2c3538']
+         ]
+      },
+      style: {
+         fontFamily: "'Roboto', sans-serif"
+      },
+      plotBorderColor: '#606063'
+   },
+   title: {
+      style: {
+         color: '#E0E0E3',
+         textTransform: 'uppercase',
+         fontSize: '20px'
+      }
+   },
+   subtitle: {
+      style: {
+         color: '#E0E0E3',
+         textTransform: 'uppercase'
+      }
+   },
+   xAxis: {
+      gridLineColor: '#364C5D',
+      labels: {
+         style: {
+            color: '#E0E0E3'
+         }
+      },
+      lineColor: '#364C5D',
+      minorGridLineColor: '#505053',
+      tickColor: '#364C5D',
+      title: {
+         style: {
+            color: '#A0A0A3'
+
+         }
+      }
+   },
+   yAxis: {
+      gridLineColor: '#364C5D',
+      labels: {
+         style: {
+            color: '#E0E0E3'
+         }
+      },
+      lineColor: '#364C5D',
+      minorGridLineColor: '#505053',
+      tickColor: '#364C5D',
+      tickWidth: 1,
+      title: {
+         style: {
+            color: '#A0A0A3'
+         }
+      }
+   },
+   exporting: { enabled: false },
+   tooltip: {
+      backgroundColor: 'rgba(0, 0, 0, 0.85)',
+      style: {
+         color: '#F0F0F0'
+      }
+   },
+   plotOptions: {
+      series: {
+         dataLabels: {
+            color: '#fff',
+            textTransform: 'uppercase',
+            textOutline: "0px 0px contrast"
+         },
+         marker: {
+            lineColor: '#333'
+         }
+      },
+      boxplot: {
+         fillColor: '#505053'
+      },
+      candlestick: {
+         lineColor: 'white'
+      },
+      errorbar: {
+         color: 'white'
+      },
+      bar:{
+          borderWidth: '0'
+      }
+   },
+   legend: {
+      itemStyle: {
+         color: '#E0E0E3'
+      },
+      itemHoverStyle: {
+         color: '#FFF'
+      },
+      itemHiddenStyle: {
+         color: '#606063'
+      }
+   },
+   credits: {
+      style: {
+         color: '#666'
+      }
+   },
+   labels: {
+      style: {
+         color: '#707073'
+      }
+   },
+
+   drilldown: {
+      activeAxisLabelStyle: {
+         color: '#F0F0F3'
+      },
+      activeDataLabelStyle: {
+         color: '#F0F0F3'
+      }
+   },
+
+   navigation: {
+      buttonOptions: {
+         symbolStroke: '#DDDDDD',
+         theme: {
+            fill: '#505053'
+         }
+      }
+   },
+
+   // scroll charts
+   rangeSelector: {
+      buttonTheme: {
+         fill: '#505053',
+         stroke: '#000000',
+         style: {
+            color: '#CCC'
+         },
+         states: {
+            hover: {
+               fill: '#707073',
+               stroke: '#000000',
+               style: {
+                  color: 'white'
+               }
+            },
+            select: {
+               fill: '#000003',
+               stroke: '#000000',
+               style: {
+                  color: 'white'
+               }
+            }
+         }
+      },
+      inputBoxBorderColor: '#505053',
+      inputStyle: {
+         backgroundColor: '#333',
+         color: 'silver'
+      },
+      labelStyle: {
+         color: 'silver'
+      }
+   },
+
+   navigator: {
+      handles: {
+         backgroundColor: '#666',
+         borderColor: '#AAA'
+      },
+      outlineColor: '#CCC',
+      maskFill: 'rgba(255,255,255,0.1)',
+      series: {
+         color: '#7798BF',
+         lineColor: '#A6C7ED'
+      },
+      xAxis: {
+         gridLineColor: '#505053'
+      }
+   },
+
+   scrollbar: {
+      barBackgroundColor: '#808083',
+      barBorderColor: '#808083',
+      buttonArrowColor: '#CCC',
+      buttonBackgroundColor: '#606063',
+      buttonBorderColor: '#606063',
+      rifleColor: '#FFF',
+      trackBackgroundColor: '#404043',
+      trackBorderColor: '#404043'
+   },
+
+   // special colors for some of the
+   legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
+   background2: '#505053',
+   dataLabelsColor: '#B0B0B3',
+   textColor: '#C0C0C0',
+   contrastTextColor: '#F0F0F3',
+   maskColor: 'rgba(255,255,255,0.3)'
+};
+
+  
+  Highcharts.setOptions(Highcharts.theme);
 </script>

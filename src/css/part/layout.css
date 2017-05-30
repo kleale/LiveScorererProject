@@ -105,7 +105,7 @@
   .f-menu{
     list-style: none;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     padding: 0;
     li{
       padding: 0;
@@ -352,11 +352,11 @@ header{
   padding: 0 50px 0 0;
   position: relative;
   .row{
-    margin-right: -5px;
-    margin-left: -5px;
+    margin-right: -2px;
+    margin-left: -2px;
     > div{
-      padding-right: 5px;
-      padding-left: 5px;
+      padding-right: 2px;
+      padding-left: 2px;
       @media (max-width: $M) {
         margin-bottom: 5px;
       }
@@ -380,6 +380,11 @@ header{
   }
   .btn-group{
     display: block;
+    .dropdown-menu{
+      i{
+        margin-right: 10px;
+      }
+    }
   }
   .btn{
     display: block;
@@ -399,8 +404,7 @@ header{
         font-weight: 100;
         float: left;
         height: 17px;
-        margin-right: 8px;
-        margin-left: -2px;
+        margin: -1px 8px 0 -2px;
         opacity: .2;
       }
     }
@@ -412,6 +416,8 @@ header{
       float: right;
       position: absolute;
       right: 10px;
+      top: 23%;
+      z-index: 2;
     }
     &:hover{
       i.times{
@@ -496,8 +502,7 @@ header{
 .datesorter{
   padding: 7px 0;
   float: right;
-  text-transform: uppercase;
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 400;
   @media (max-width: $M) {
     padding: 15px 0 0 0;
@@ -524,7 +529,7 @@ header{
     }
   }
   span{
-    padding: 0 10px;
+    padding: 0 5px;
   }
 }
 
@@ -637,6 +642,7 @@ header{
         top: 27px;
         left: 0px;
         position: absolute;
+        z-index: 3;
       }
       @media (max-width: $M){
         right: auto;
@@ -856,7 +862,7 @@ header{
           margin-top: -4px;
           left: 0;
           position: absolute;
-          box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.64);
+          box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.4);
           
           @media (max-width: $M){
             left: 26px;
@@ -878,6 +884,7 @@ header{
       height: auto;
       margin: 0;
       background: linear-gradient(to bottom, #e8e8e8 0%,#f9f2ed 100%);
+      margin-top: -4px;
     }
   } /*.event*/
 } /*.event_list*/
@@ -920,6 +927,8 @@ header{
   border-bottom: 1px solid red;
   display: none;
   margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
   &.active{
     display: block;
     border-radius: 0 0 3px 3px;
@@ -944,16 +953,16 @@ header{
 
 .eventgraf{
   overflow: hidden;
+  background: #eaeaea;
   .dotanet{
     float: left;
     width: 65%;
-    min-height: 240px;
+    min-height: 235px;
     @media (max-width: $M){
       float: none;
       width: 100%;
     }
     .nav{
-      background: #eaeaea;
       li{
         a{
           padding: 5px 10px;
@@ -1170,7 +1179,11 @@ header{
 * NIGHT
 */
 .nightmode{
+  color: #a8bdbd;
   background-color: $darkbg;
+  h2{
+    color: $darkactive;
+  }
   .bread{
     background: $darkactive;
     color: $darkbg;
@@ -1195,6 +1208,7 @@ header{
         color: $darkactive;
          i{
           color: $darkactive;
+          text-shadow: 0 1px 7px $darkactive;
         }
       }
     }
@@ -1204,14 +1218,15 @@ header{
       &:hover,
       &:focus{
         color: $darkactive;
+        text-shadow: 0 1px 7px $darkactive;
       }
     }
   }
   .btn-br{
-    border-color: $darkbg;
+    border-color: $darkactive;
     color: $darkactive;
     &:hover{
-      color: $darklight!important;
+      color: #fff!important;
       background: $darkactive;
       border-color: $darkactive;
       b{
@@ -1219,7 +1234,7 @@ header{
       }
     }
     &.active {
-      color: $darklight;
+      color: #fff;
       border-color: $darkactive;
       background: $darkactive;
     }
@@ -1227,7 +1242,7 @@ header{
       color: $darkactive;
     }
     &.btn-red {
-      color: $darklight;
+      color: #fff;
       background: $darkactive;
       border-color: $darkactive;
       &:hover{
@@ -1246,13 +1261,197 @@ header{
     .btns a{
       color: $darklight;
       &.active {
-        color: $darklight;
+        color: #fff;
         background: $darkactive;
       }
     }
   }
-  .datesorter a{
+  .datesorter{
     color: $darkactive;
+    a{
+      color: $darkactive;
+      border-color: $darkactive;
+    }
+  }
+  .footer{
+    background: #192427;
+    color: rgba(153, 153, 153, 0.63);
+    .contacts{
+      b{
+        color: $darkactive;
+        span{
+          color: rgba(153, 153, 153, 0.63);
+        }
+      }
+    }
+    .f-menu {
+      a{
+        color: rgba(153, 153, 153, 0.63);
+        :hover{
+          color: $darkactive;
+        }
+      }
+      b{
+        color: $darkactive;
+        span{
+          color: rgba(153, 153, 153, 0.63);
+        }
+      }
+    }
+  }
+  .nav-pager .pagination li {
+    a,
+    span{
+      color: $darkactive;
+    }
+    &.active{
+      a{
+        background: $darkactive;
+      }
+    }
+    a:hover{
+      background: $darkactive;
+    }
+  }
+  .banner{
+    background: #434e52;
+  }
+  .event_list{
+    .event{
+      background-color: $darksub2;
+      border-color: $darksub;
+      color: #d8d8d8;
+      &.active{
+        border-left-color: $darkactive;
+        border-right-color: $darkactive;
+        border-top-color: $darkactive;
+        &:hover{
+          border-bottom-color: $darksub;
+        }
+      }
+      &:hover{
+        background: #3d5252;
+        .scores .team-home span:after, 
+        .scores .team-away span:after,
+        .actions .btns a{
+          background: #3d5252;
+        }
+      }
+      >div a{
+        color: #d8d8d8;
+      }
+      .game a{
+        color: $darkactive;
+        text-shadow: 0 1px 11px $darkactive;
+      }
+      &.event-live .teams {
+        a span:first-child{
+          border-bottom-color: #31a4a0;
+        }
+        &:before{
+          box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.2);
+        }
+      }
+      .teams a span:first-child{
+        border-bottom-color: $darksub;
+      }
+      .scores .team-home span,
+      .scores .team-away span{
+        color: #cebc50;
+        &:after{
+          background: $darksub2;
+          color: $darkactive;
+        }
+      }
+      .actions .btns a{
+        background: $darksub2;
+        color: $darkactive;
+        &.btn{
+          color: #fff;
+          border-color: $darkactive;
+          background: $darksub;
+        }
+      }
+    }
+    .eventbets{
+      background: $darksub2;
+      color: #a8bdbd;
+      table tr td {
+        border-color: $darksub;
+      }
+    }
+  }
+  .eventinfo{
+    border-left-color: $darkactive;
+    border-right-color: $darkactive;
+    border-bottom-color: $darkactive;
+    background: #2c3538;
+    &.active{
+      margin-top: -1px;
+    }
+    .eventgraf{
+      background: $darksub2;
+      border-top: 1px solid $darksub;
+      .dotanet{
+        .nav-tabs{
+          border-bottom-color: $darkactive;
+        }
+        .nav li a{
+          color: $darkactive;
+        }
+        .nav li.active a,
+        .nav li.active a:hover,
+        .nav li.active a:focus{
+          background: #2c3538;
+          color: $darkactive;
+          border-color: $darkactive;
+          border-bottom-color: transparent;
+        }
+        .nav li:first-child a{
+          border-left: 0;
+        }
+        .chart{
+        }
+      }
+      .dotamapt{
+        background: $darksub2;
+        border-left: 1px solid $darksub;
+        border-bottom: 1px solid $darksub;
+      }
+    }
+    .block{
+      border-color: $darksub;
+      h3{
+        span{
+          background: #2c3538;
+          color: $darkactive;
+        }
+      }
+    }
+    .streams ul li a{
+      color: #a8bdbd;
+      &:hover{
+        background: $darksub;
+        color: #fff;
+      }
+    }
+    .players {
+      .player td:nth-child(3){
+        color: $darkactive;
+      }
+      .table>tbody>tr {
+        border-bottom-color: $darksub;
+      }
+    }
+  }
+  .double-bounce1, .double-bounce2{
+    background-color: $darkactive;
+  }
+  .dropdown-menu{
+    background-color: $darkactive;
+  }
+  .open>.dropdown-toggle.btn.btn-br{
+    background-color: $darkactive;
     border-color: $darkactive;
   }
 } /*.nightmode*/

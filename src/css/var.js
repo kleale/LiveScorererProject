@@ -16,8 +16,7 @@ module.exports = {
     "$theme-main": "#ed1c24",
     "$text-main": "#111",
     "$text-gray-1": "#5c5f62",
-    "$text-gray-2": "#6c6c6c",
-    "$text-gray-3": "#a0a0a0",
+    "$text-gray-2": "#a0a0a0",
 
     "$link": "#e72f2f",
     "$link-active": "#2faee7",
@@ -40,6 +39,7 @@ module.exports = {
   
     //dark
     "$darkbg": "#1b292f",
+    "$darksub2": "#3a464a",
     "$darksub": "#466968",
     "$darkactive": "#31a4a0",
     "$darklight": "#68d8d2",
