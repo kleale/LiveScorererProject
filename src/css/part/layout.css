@@ -137,7 +137,8 @@
 header{
   background: #fff;
   padding: 30px 0;
-  position: relative;
+  position: absolute;
+  width: 100%;
   z-index: 3;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
   @media (max-width: $M) {
@@ -169,7 +170,7 @@ header{
         display: block;
         padding: 5px 10px;
         @media (max-width: $M){
-          padding: 5px;
+          padding: 5px 2px;
         }
         font-size: 16px;
         color: #999;
@@ -251,12 +252,12 @@ header{
     float: right;
     padding: 8px 0;
     @media (max-width: $M){
-      padding: 5px;
+      padding: 7px 0;
       .btn{
-        padding: 5px 0;
-        /*&:before{
-          display: none;
-        }*/
+        padding: 5px 1px;
+        .caret{
+          margin-left: 0px;
+        }
       }
     }
     .nightmode-btn{
@@ -295,6 +296,12 @@ header{
       }
     }
   }
+  &.affix{
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    transition: $transition;
+  }
 }
 
 .bgad{
@@ -328,6 +335,11 @@ header{
   z-index: 2;
   min-height: 900px;
   background: #fff;
+  padding-top: 90px;
+  transition: $transition;
+}
+.affixpad .mainwrap{
+  padding-top: 60px;
 }
 .page-content{
   padding: 15px 0;
@@ -349,7 +361,7 @@ header{
   }
 }
 .filters{
-  padding: 0 50px 0 0;
+  padding: 0 45px 0 0;
   position: relative;
   .row{
     margin-right: -2px;
@@ -386,6 +398,9 @@ header{
       }
     }
   }
+  .select2{
+    margin: 3px 0;
+  }
   .btn{
     display: block;
     float: none;
@@ -411,6 +426,7 @@ header{
     b{
       color: red;
       font-weight: 700;
+      margin-left: 5px;
     }
     .caret{
       float: right;

@@ -7,13 +7,35 @@
   $(document).ready(function () {
     //tip
     $('.tip').tooltip();
+    //affix panel offset
+    $('header').on('affix.bs.affix', function () {
+      $('body').addClass('affixpad');
+    });
+    $('header').on('affixed-top.bs.affix', function () {
+      $('body').removeClass('affixpad');
+    });
+    
+    //images in select2
+    /*
+    function formatState (state) {
+      if (!state.id) { return state.text; }
+      var $state = $(
+        '<span><img src="vendor/images/flags/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
+      );
+      return $state;
+    };*/
+    // http://select2.github.io/examples.html#themes-templating-responsive-design
+    $(".select2").select2({
+      placeholder: "Выбрать команду"
+      //templateResult: formatState
+    });
     
     //fancy
     $('.fancybox').fancybox({
-      prevEffect	: 'none',
-      nextEffect	: 'none',
-      helpers	: {
-        title	: {
+      prevEffect: 'none',
+      nextEffect: 'none',
+      helpers: {
+        title: {
           type: 'outside'
         }
       }
