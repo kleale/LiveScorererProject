@@ -231,7 +231,7 @@ $(function () {
     plotOptions: {
       area: {
         pointStart: 10,
-        negativeColor: 'red',
+        negativeColor: '#ff0000',
         marker: {
           enabled: false,
           symbol: 'circle',

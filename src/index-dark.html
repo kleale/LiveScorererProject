@@ -47,8 +47,7 @@
   
 //DARK Highcharts theme
    Highcharts.theme = {
-   colors: ["#47c54a", "#df4b4f", "#16b4d1", "#2c708e", "#d300aa", "#c19400", "#a2110c",
-      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   colors: ["#3cb493","#df4b4f","#16b4d1","#2c708e","#d300aa","#c19400","#a2110c","#55BF3B","#DF5353","#7798BF","#aaeeee"],
    chart: {
       backgroundColor: {
          linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
@@ -58,7 +57,7 @@
          ]
       },
       style: {
-         fontFamily: "'Roboto', sans-serif"
+        fontFamily: "'Roboto', sans-serif"
       },
       plotBorderColor: '#606063'
    },
@@ -76,7 +75,7 @@
       }
    },
    xAxis: {
-      gridLineColor: '#364C5D',
+      gridLineColor: '#365d4a',
       labels: {
          style: {
             color: '#E0E0E3'
@@ -118,65 +117,66 @@
    },
    plotOptions: {
       series: {
-         dataLabels: {
-            color: '#fff',
-            textTransform: 'uppercase',
-            textOutline: "0px 0px contrast"
-         },
-         marker: {
-            lineColor: '#333'
-         }
+        fillOpacity: 0.2,
+        dataLabels: {
+          color: '#fff',
+          textTransform: 'uppercase',
+          textOutline: "0px 0px contrast"
+        },
+        marker: {
+          lineColor: '#333333'
+        }
       },
       boxplot: {
-         fillColor: '#505053'
+        fillColor: '#505053'
       },
       candlestick: {
-         lineColor: 'white'
+        lineColor: 'white'
       },
       errorbar: {
-         color: 'white'
+        color: 'white'
       },
       bar:{
-          borderWidth: '0'
+        borderWidth: '0'
       }
    },
    legend: {
       itemStyle: {
-         color: '#E0E0E3'
+        color: '#E0E0E3'
       },
       itemHoverStyle: {
-         color: '#FFF'
+        color: '#ffffff'
       },
       itemHiddenStyle: {
-         color: '#606063'
+        color: '#606063'
       }
    },
    credits: {
       style: {
-         color: '#666'
+        color: '#666666'
       }
    },
    labels: {
       style: {
-         color: '#707073'
+        color: '#707073'
       }
    },
 
    drilldown: {
       activeAxisLabelStyle: {
-         color: '#F0F0F3'
+        color: '#F0F0F3'
       },
       activeDataLabelStyle: {
-         color: '#F0F0F3'
+        color: '#F0F0F3'
       }
    },
 
    navigation: {
       buttonOptions: {
-         symbolStroke: '#DDDDDD',
-         theme: {
-            fill: '#505053'
-         }
+        symbolStroke: '#DDDDDD',
+        theme: {
+          fill: '#505053'
+        }
       }
    },
 

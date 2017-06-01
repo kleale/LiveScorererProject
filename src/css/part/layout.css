@@ -136,7 +136,7 @@
 
 header{
   background: #fff;
-  padding: 30px 0;
+  padding: 20px 0;
   position: absolute;
   width: 100%;
   z-index: 3;
@@ -187,7 +187,6 @@ header{
         }
         i{
           font-size: 21px;
-          /*text-shadow: 0 0 1px #000;*/
           color: #b8b8b8;
           transition: $transition;
           @media (max-width: $M) {
@@ -207,31 +206,7 @@ header{
       }
       &.active{
         color: red;
-        /*&:before{
-          transition: $transition;
-          content: '';
-          display: block;
-          position: absolute;
-          top: -2px;
-          right: -6px;
-          bottom: 2px;
-          left: 3px;
-          border: 1px solid red;
-          border-radius: 3px;
-          transform-origin: center;
-          transform: perspective(100px) rotateY(16deg);
-          transform-style: preserve-3d;
-          @media (max-width: $M) {
-            display: none;
-          }
-        }*/
         &:hover{
-          /*&:before{
-            transform: perspective(100px) rotateY(-10deg);
-            right: 6px;
-            bottom: 2px;
-            left: -3px;
-          }*/
         }
         a{
           cursor: default;
@@ -313,7 +288,7 @@ header{
   position: absolute;
   width: 100%;
   z-index: 2;
-  top: 125px;
+  top: 95px;
 }
 .container {
   max-width: 1000px;
@@ -335,7 +310,7 @@ header{
   z-index: 2;
   min-height: 900px;
   background: #fff;
-  padding-top: 90px;
+  padding-top: 70px;
   transition: $transition;
 }
 .affixpad .mainwrap{
@@ -344,7 +319,7 @@ header{
 .page-content{
   padding: 15px 0;
   .center-col{
-    width: calc( 100% - 190px);
+    width: calc( 100% - 180px);
     float: left;
     @media (max-width: $XM) {
       width: 100%;
@@ -361,7 +336,7 @@ header{
   }
 }
 .filters{
-  padding: 0 45px 0 0;
+  padding: 0 42px 0 0;
   position: relative;
   .row{
     margin-right: -2px;
@@ -376,30 +351,19 @@ header{
   }
   .btn-ok{
     position: absolute 0px 0 * *;
-    /*&:before{
-      content: '';
-      display: block;
-      position: absolute;
-      top: -2px;
-      right: 0px;
-      bottom: -3px;
-      left: 0px;
-      border-radius: 3px;
-      transform-origin: center;
-      transform: rotateX(-7deg) perspective(200px) rotateY(-20deg) skewX(8deg);
-      transform-style: preserve-3d;
-    }*/
   }
   .btn-group{
     display: block;
     .dropdown-menu{
       i{
         margin-right: 10px;
+        font-size: 13px;
+        vertical-align: middle;
       }
     }
   }
   .select2{
-    margin: 3px 0;
+    
   }
   .btn{
     display: block;
@@ -447,7 +411,7 @@ header{
 }
 .filters_sub{
   color: #000;
-  padding: 13px 0 10px;
+  padding: 10px 0;
   overflow: hidden;
   @media (max-width: $M) {
     text-align: center;
@@ -460,57 +424,35 @@ header{
       color: #000;
       font-size: 13px;
       font-weight: 400;
-      padding: 5px 10px;
-      margin-right: 10px;
-      /*&:before{
-        top: 0px;
-        right: 0px;
-        bottom: 1px;
-        left: 0px;
-        border: 1px solid red;
-        border-radius: 3px;
-        transform-origin: center;
-        transform: perspective(100px) rotateY(0deg);
-      }*/
+      padding: 3px 10px;
+      margin: 2px 5px 2px 0;
       &:nth-child(1){
         color: #000;
-        margin-right: 15px;
-        /*&:before{
-          transform: perspective(100px) rotateY(-27deg);
-          left: -2px;
-        }*/
       }
       &:nth-child(2){
         color: red;
-        /*&:before{
-          transform: perspective(100px) rotateY(27deg);
-          left: -2px;
-          right: -3px;
-        }*/
+        padding-left: 22px;
         &:after{
           content: '';
           display: block;
-          width: 9px;
-          height: 9px;
+          width: 10px;
+          height: 10px;
           background: red;
           border-radius: 50%;
-          position: absolute 9px * * -6px;
-          box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.64);
+          position: absolute 7px * * 7px;
+          box-shadow: 0 0 5px 2px rgba(253, 3, 3, 0.29);
         }
         &:hover{
           color: #fff;
+          &:after{
+            background: #fff;
+          }
         }
       }
-      &:nth-child(3){
-        padding: 3px 10px;
-        margin: 2px 0;
-      }
-      &.active{
+      &.active,
+      &:hover{
         color: #fff;
         background: red;
-        /*&:before{
-          background: red;
-        }*/
       }
     }
   }
@@ -979,6 +921,9 @@ header{
       width: 100%;
     }
     .nav{
+      margin-top: -1px;
+      position: relative;
+      z-index: 1;
       li{
         a{
           padding: 5px 10px;
@@ -1205,6 +1150,9 @@ header{
     color: $darkbg;
     a{
       color: $darkbg;
+      &:hover{
+        color: #eff16c;
+      }
     }
   }
   header{
@@ -1242,7 +1190,7 @@ header{
     border-color: $darkactive;
     color: $darkactive;
     &:hover{
-      color: #fff!important;
+      color: #c8e8e7!important;
       background: $darkactive;
       border-color: $darkactive;
       b{
@@ -1250,7 +1198,7 @@ header{
       }
     }
     &.active {
-      color: #fff;
+      color: #c8e8e7;
       border-color: $darkactive;
       background: $darkactive;
     }
@@ -1258,7 +1206,7 @@ header{
       color: $darkactive;
     }
     &.btn-red {
-      color: #fff;
+      color: #c8e8e7;
       background: $darkactive;
       border-color: $darkactive;
       &:hover{
@@ -1276,8 +1224,9 @@ header{
   .filters_sub {
     .btns a{
       color: $darklight;
-      &.active {
-        color: #fff;
+      &.active,
+      &:hover{
+        color: #c8e8e7;
         background: $darkactive;
       }
     }
@@ -1359,13 +1308,16 @@ header{
       .game a{
         color: $darkactive;
         text-shadow: 0 1px 11px $darkactive;
+        &:hover{
+          color: #eff16c;
+        }
       }
       &.event-live .teams {
         a span:first-child{
           border-bottom-color: #31a4a0;
         }
         &:before{
-          box-shadow: 0 0 0 5px rgba(255, 199, 199, 0.2);
+          box-shadow: 0 0 2px 5px rgba(255, 77, 77, 0.2);
         }
       }
       .teams a span:first-child{
@@ -1382,10 +1334,18 @@ header{
       .actions .btns a{
         background: $darksub2;
         color: $darkactive;
+        &:hover{
+          color: #eff16c;
+        }
         &.btn{
-          color: #fff;
+          color: #c8e8e7;
           border-color: $darkactive;
           background: $darksub;
+          &:hover{
+            background: #eff16c;
+            color: $darksub;
+            border-color: $darksub;
+          }
         }
       }
     }
@@ -1406,14 +1366,22 @@ header{
       margin-top: -1px;
     }
     .eventgraf{
-      background: $darksub2;
+      background: #2c3538;
       border-top: 1px solid $darksub;
+      border-bottom: 1px solid $darksub;
       .dotanet{
+        border-right: 1px solid $darksub;
+        padding-right: 1px;
         .nav-tabs{
           border-bottom-color: $darkactive;
         }
         .nav li a{
           color: $darkactive;
+          &:hover{
+            background: $darkactive;
+            color: #333;
+            border-color: $darkactive;
+          }
         }
         .nav li.active a,
         .nav li.active a:hover,
@@ -1430,9 +1398,7 @@ header{
         }
       }
       .dotamapt{
-        background: $darksub2;
-        border-left: 1px solid $darksub;
-        border-bottom: 1px solid $darksub;
+        background: #2c3538;
       }
     }
     .block{
@@ -1448,7 +1414,7 @@ header{
       color: #a8bdbd;
       &:hover{
         background: $darksub;
-        color: #fff;
+        color: #c8e8e7;
       }
     }
     .players {

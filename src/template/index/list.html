@@ -14,7 +14,7 @@
   {% for i in 0..5 %}
     <div class="event {{eventlive[i]}} {{active[i]}}" id="id{{i}}"> 
       <div class="game">
-        <a href="#sort-by-game" title="game" class="tip" title="Sort by game">
+        <a href="#sort-by-game" class="tip" title="Sort by game">
           <i class="gti-582"></i>
         </a>
       </div>
@@ -117,13 +117,13 @@
       <div class="eventgraf eventgraf-dota">
         <div class="dotanet">
             <ul class="nav nav-tabs" role="tablist">
-              <li class="active"><a href="#networth" role="tab" data-toggle="tab">Networth</a></li>
-              <li><a href="#experience" role="tab" data-toggle="tab">Experience</a></li>
-              <li><a href="#gold" role="tab" data-toggle="tab">Gold</a></li>
+              <li class="active"><a href="#networth{{i}}" role="tab" data-toggle="tab">Networth</a></li>
+              <li><a href="#experience{{i}}" role="tab" data-toggle="tab">Experience</a></li>
+              <li><a href="#gold{{i}}" role="tab" data-toggle="tab">Gold</a></li>
             </ul>
             <!-- Tab panes -->
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="networth">
+              <div role="tabpanel" class="tab-pane active" id="networth{{i}}">
                 <div id="networth-chart" class="chart">
                   <!-- LOADER -->
                   <div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div>
@@ -131,16 +131,16 @@
                   <!-- LOADER END -->
                 </div>
               </div>
-              <div role="tabpanel" class="tab-pane" id="experience">
-                <div id="experience-chart" class="chart">
+              <div role="tabpanel" class="tab-pane" id="experience{{i}}">
+                <div id="experience-chart{{i}}" class="chart">
                   <!-- LOADER -->
                   <div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div>
                   </div>
                   <!-- LOADER END -->
                 </div>
               </div>
-              <div role="tabpanel" class="tab-pane" id="gold">
-                <div id="gold-chart" class="chart">
+              <div role="tabpanel" class="tab-pane" id="gold{{i}}">
+                <div id="gold-chart{{i}}" class="chart">
                   <!-- LOADER -->
                   <div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div>
                   </div>

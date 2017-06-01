@@ -15,30 +15,36 @@
       $('body').removeClass('affixpad');
     });
     
-    //images in select2
-    /*
-    function formatState (state) {
-      if (!state.id) { return state.text; }
-      var $state = $(
-        '<span><img src="vendor/images/flags/' + state.element.value.toLowerCase() + '.png" class="img-flag" /> ' + state.text + '</span>'
-      );
-      return $state;
-    };*/
     // http://select2.github.io/examples.html#themes-templating-responsive-design
-    $(".select2").select2({
-      placeholder: "Выбрать команду"
-      //templateResult: formatState
+    $(".select2").select2();
+    $(".tour-select2").select2({
+      placeholder: "Выбрать tурнир",
+      templateResult: formatPic
     });
+    $(".teams-select2").select2({
+      placeholder: "Выбрать команду",
+      templateResult: formatPic
+    });
+    //images in select2
+    function formatPic (pic) {
+      if (!pic.id) { return pic.text; }
+      var $pic = $(
+        '<span><img src="' + pic.element.value.toLowerCase() + '" class="img-ico"/> ' + pic.text + '</span>'
+      );
+      return $pic;
+    };
     
     //fancy
     $('.fancybox').fancybox({
-      prevEffect: 'none',
+      openEffect  : 'none',
+      closeEffect : 'none',
+      /*prevEffect: 'none',
       nextEffect: 'none',
       helpers: {
         title: {
           type: 'outside'
         }
-      }
+      }*/
     });
     $('.fancybox-media').fancybox({
       openEffect  : 'none',
@@ -57,5 +63,4 @@
       $(this).closest('.event').next().toggleClass('active');
     });
   }); //end ready
-
 }(jQuery));

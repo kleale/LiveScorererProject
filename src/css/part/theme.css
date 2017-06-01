@@ -107,16 +107,16 @@
 }
 
 .dropdown-menu {
-    background: red;
-    box-shadow: 4px 4px 10px rgba(0,0,0,.1);
-    padding: 0;
-    margin: 2px -1px;
-    border: 0;
-    border-radius: 5px;
-    width: 100%;
-    min-width: 170px;
-    max-height: 400px;
-    overflow-y: auto;
+  background: red;
+  box-shadow: 4px 4px 10px rgba(0,0,0,.1);
+  padding: 0;
+  margin: 2px -1px;
+  border: 0;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 170px;
+  max-height: 400px;
+  overflow-y: auto;
   li{
     &:nth-child(2n+1){
       background: rgba(255, 255, 255, 0.04);
@@ -172,18 +172,18 @@
   .caret{
     margin-left: 4px;
     border: 0;
-    font-family: FontAwesome;
+    font-family: 'FontAwesome';
     display: inline-block;
     width: auto;
     height: auto;
     float: none;
     &:before{
-      content:'';
+      content:'\f107';
     }
   }
 }
 .btn-xs{
-  padding: 4px 8px 3px;
+  padding: 3px 8px 3px;
   font-size: 11px;
   line-height: 1;
   text-transform: uppercase;
@@ -337,13 +337,16 @@ body .open>.dropdown-toggle.btn-default:focus{
 /*
 * Forms
 */
-
 .form-control{
   border-radius: $br;
   color: $text-main;
   box-shadow: none;
   vertical-align: top;
   outline: none;
+  padding: 0 8px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 13px;
   &:active,
   &:focus,
   &:hover{
@@ -356,7 +359,7 @@ body .open>.dropdown-toggle.btn-default:focus{
   height: 28px;
 }
 select.form-control{
-  background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGBJREFUeNpi/P//fzIDA8NFID7DgB2YALEeE5DYBcRWQOyERZETVG43I9BEkIAoEAcB8TMg3gZV5AXEMkC8BohfwxSCAB9U8Q8onwOI1wHxJxAHWSFM0h/K3oikiQEgwACQhxnKC4LrMAAAAABJRU5ErkJggg==');
+  background-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAk0lEQVQIW2Ps6+tL/v3798Xy8vIzDFhAZ2enCQsLix5jb2+vLFA+8N+/f1dKS0v3Iavt7u52YmJi0gGKrWcESbS1tYmys7MHARU/O3Xq1DaQmJmZmRdQkczPnz/XVFVVvQYrBIGGhgY+Xl7eIEZGxh8g/v///zk+f/68Dij+CcSHK4Qq5gAq9gexgYo2AhWBNYEAACt6ONORVV9nAAAAAElFTkSuQmCC');
   background-position: 96% 50%;
   background-repeat: no-repeat;
   appearance:none;
@@ -365,6 +368,7 @@ select.form-control{
   &:hover{
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAFCAYAAAB8ZH1oAAAAk0lEQVQIW2Ps6+tL/v3798Xy8vIzDFhAZ2enCQsLix5jb2+vLFA+8N+/f1dKS0v3Iavt7u52YmJi0gGKrWcESbS1tYmys7MHARU/O3Xq1DaQmJmZmRdQkczPnz/XVFVVvQYrBIGGhgY+Xl7eIEZGxh8g/v///zk+f/68Dij+CcSHK4Qq5gAq9gexgYo2AhWBNYEAACt6ONORVV9nAAAAAElFTkSuQmCC');
     background-repeat: no-repeat;
+    background-position: 96% 50%;
   }
 }
 /*
@@ -888,9 +892,12 @@ svg btn
 .filters .br3{
   min-height: 35px;
   margin-left: -4px!important;
+  margin-top: -4px!important;
 }
 .button.btn-ok{
-  height: 36px;
+  height: 37px;
+  margin-top: -3px;
+  padding-left: 8px;
   &:hover{
     background: transparent;
     border-color: transparent;
@@ -904,12 +911,57 @@ svg btn
 }
 
 /*
+* Selcet2
+*/
+
+.select2-container--default .select2-selection--single{
+  background-color: inherit;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  font-size: 13px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b{
+  border-color: transparent;
+  font-family: 'FontAwesome';
+  line-height: 1px;
+  font-size: 12px;
+  margin-top: -4px;
+  margin-left: -13px;
+  &:before{
+    content: '\f107';
+  }
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent;
+  border-width: 0;
+  transform: rotate(180deg);
+  margin-top: 1px;
+  margin-left: 4px;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+  background-color: #ff0000;
+}
+.select2-results__option {
+  padding: 4px;
+  font-size: 12px;
+  .img-ico {
+    max-width: 40px;
+    max-height: 18px;
+    margin: -2px 3px 0 0;
+  }
+}
+.select2-search--dropdown .select2-search__field {
+  padding: 2px 4px;
+}
+
+/*
 * NIGHT
 */
 .nightmode{
   .form-control{
-    background: #454a4e;
-    color: #fff;
+    background-color: transparent;
+    color: $darkactive;
+    border-color: $darkactive;
   }
   .button{
     &.btn-fill{
@@ -921,11 +973,12 @@ svg btn
     }
   }
   .btn.btn-br .btn_txt {
-    color: #fff;
+    color: #c8e8e7;
   }
   .btn-fill .morph-shape svg {
     fill: $darkactive;
   }
+  
   .open>.dropdown-toggle.btn.btn-br.button,
   .open>.dropdown-toggle.btn.btn-br.button:hover,
   .dropdown-toggle.btn.btn-br.button:hover{
@@ -936,10 +989,64 @@ svg btn
   .button.btn-ok {
     background: transparent!important;
     border-color: transparent!important;
-    .morph-shape svg{
-      &:hover{
+    &:hover{
+      .morph-shape svg{
         fill: #29928e;
       }
     }
   }
+  .dropdown-menu{
+    li{
+      a{
+        color: #c8e8e7;
+        &:hover{
+          background: $darklight;
+          color: $darksub;
+        }
+      }
+      &.active{
+        a{
+          background: $darklight;
+          color: $darksub;
+          &:hover{
+            background: $darklight;
+          }
+        }
+      }
+    }
+  }
+  
+  .select2-container--default .select2-selection--single{
+    border-color: $darkactive;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: $darkactive;
+  }
+  .select2-dropdown{
+    background-color: $darkactive;
+    border-color: $darkactive;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow b{
+    color: $darkactive;
+  }
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    color: $darkactive;
+  }
+  .select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: $darklight;
+    color: $darksub;
+  }
+  .select2-container--default .select2-search--dropdown .select2-search__field {
+    background-color: $darksub2;
+    border-color: $darkactive;
+  }
+  .select2-results{
+    color: #c8e8e7;
+  }
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: $darklight;
+    color: $darksub;
+  }
 }
+
+

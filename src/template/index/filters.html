@@ -1,6 +1,8 @@
 <!-- filters.html -->
 {% set team = ['NewBee', 'Virtus.Pro','OG','Liquid','Navi'] %}
 {% set tour = ['World Cyber Arena', 'International'] %}
+{% set logo = ['http://game-tournaments.com/media/logo/_60/pic-20161110-500x500-918003572.png', 'http://game-tournaments.com/media/logo/_60/pic-20161110-600x600-7320131375.png','http://game-tournaments.com/media/logo/_60/pic-20161110-300x300-984796327.png','http://game-tournaments.com/media/logo/_60/pic-20160427-400x400-4903299505.png','http://game-tournaments.com/media/logo/_60/pic-20161110-300x300-752810928.png','http://game-tournaments.com/media/logo/_60/pic-20161027-600x600-9332827152.png'] %}
+{% set tour_logo = ['http://game-tournaments.com/media/tournament/_60/pic-20170217-600x261-1123288553.png', 'http://game-tournaments.com/media/tournament/_60/pic-20170318-400x386-8106403034.png'] %}
 
 <div class="filters">
   <div class="row">
@@ -11,9 +13,8 @@
           <span class="caret"></span>
           <span class="morph-shape">
             <svg width="100%" height="100%" viewBox="0 0 416.333 71.369" preserveAspectRatio="none">
-              <path d="M8.054,0L402.78,5.083c3.743,0,6.777,3.034,6.777,6.777
-                  l6.776,45.741c0,3.742-3.035,6.776-6.776,6.776L14.831,71.153c-3.742,0-6.776-3.035-6.776-6.776l-6.776-57.6
-                  C1.278,3.035,4.312,0,8.054,0z"/>
+              <path d="M8.054,0l401.501,5.083c3.743,0,6.777,3.034,6.777,6.777v45.741c0,3.742-3.035,6.776-6.775,6.776
+	L14.831,71.153c-3.742,0-6.776-3.035-6.776-6.776l-6.776-57.6C1.278,3.035,4.312,0,8.054,0"/> 
             </svg>
           </span>
         </a>
@@ -37,11 +38,11 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <div class="btn-group">
+      <div class="form-control-wr">
         <!--http://select2.github.io/examples.html#themes-templating-responsive-design-->
-        <select name="" id="" class="form-control select2">
+        <select name="1" id="11" class="form-control teams-select2">
           {% for i in 0..5 %}
-            <option value="{{i}}">
+            <option value="{{random(logo)}}">
               {{random(team)}}
             </option>
           {% endfor %}
@@ -78,10 +79,10 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <div class="btn-group">
-        <select name="" id="" class="form-control select2">
+      <div class="form-control-wr btn-group">
+        <select name="2" id="22" class="form-control tour-select2">
           {% for i in 0..5 %}
-            <option value="{{i}}">
+            <option value="{{random(tour_logo)}}">
               {{random(tour)}}
             </option>
           {% endfor %}
@@ -121,9 +122,8 @@
     <span class="btn_txt">OK</span>
     <span class="morph-shape">
       <svg width="100%" height="100%" viewBox="0 0 95.695 76.31" preserveAspectRatio="none">
-        <path d="M7.415,2.933h74.849c3.744,0,6.777,3.034,6.777,6.777l6.653,57.823
-	c0,3.742-3.035,6.776-6.777,6.776l-73.726-8.224c-3.742,0-6.776-3.035-6.776-6.776l-7.776-49.6C0.639,5.968,3.673,2.933,7.415,2.933
-	z"/>
+        <path d="M6.775,3h75.143c3.743,0,6.776,3.033,6.776,6.776l7,57.757c0,3.742-3.035,6.776-6.777,6.776L6.776,67.002
+	C3.034,67.002,0,63.967,0,60.226V9.775C0,6.034,3.033,3,6.775,3z"/>
       </svg>
     </span>
   </a>
